@@ -10,24 +10,8 @@ public abstract class Enemy : MonoBehaviour
     bool isDead = false;
     bool isBoss = true;
 
-    //EnemyHead head1 = new EnemyHead();
-    //EnemyHeart heart = new EnemyHeart();
-
-    private void FixedUpdate()
-    {
-        //this.TestClass();
-    }
 
     public abstract string GetName();
-
-    void TestClass()
-    {
-        this.Moving();
-
-        this.SetHp(-1);
-        string logMessage = this.GetName() + ": " + this.GetCurrentHp() + " " + this.IsDead();
-        Debug.Log(logMessage);
-    }
 
     public virtual bool IsDead()
     {
@@ -40,6 +24,11 @@ public abstract class Enemy : MonoBehaviour
     public virtual int GetCurrentHp()
     {
         return this.currentHp;
+    }
+
+    public virtual int GetMaxHp()
+    {
+        return this.maxHp;
     }
 
     public virtual void SetHp(int newHp)
