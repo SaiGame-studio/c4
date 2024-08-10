@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Eagle : Enemy
 {
-    protected override string GetName()
+    public override string GetName()
     {
         return "Eagle";
     }
