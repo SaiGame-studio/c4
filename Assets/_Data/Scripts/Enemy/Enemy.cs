@@ -6,12 +6,33 @@ public abstract class Enemy : MonoBehaviour
 {
     int currentHp = 100;
     int maxHp = 100;
-    float weight = 2.5f;
+    float weight = 1;
+    float minWeight = 1f;
+    float maxWeight = 10f;
     bool isDead = false;
     bool isBoss = true;
 
+    private void Reset()
+    {
+        this.InitData();
+    }
+
+    void OnEnable()
+    {
+        this.InitData();
+    }
 
     public abstract string GetName();
+
+    protected virtual void InitData()
+    {
+        this.weight = this.GetRandomWeight();
+    }
+
+    protected virtual float GetRandomWeight()
+    {
+        return Random.Range(this.minWeight, this.maxWeight);
+    }
 
     public virtual bool IsDead()
     {
