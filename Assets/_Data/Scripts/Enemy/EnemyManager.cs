@@ -16,7 +16,6 @@ public class EnemyManager : MonoBehaviour
 
         foreach(Transform childObj in transform)
         {
-            Debug.Log(childObj.name);
             Enemy enemy = childObj.GetComponent<Enemy>();
             if (enemy == null) continue;
             this.enemies.Add(enemy);
