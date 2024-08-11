@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     List<Enemy> enemies = new List<Enemy>();
+    public List<Enemy> Enemies => this.enemies;
+
     Enemy smallestEnemey;
     Enemy biggestEnemey;
 
@@ -27,7 +29,7 @@ public class EnemyManager : MonoBehaviour
         foreach (Enemy enemy in this.enemies)
         {
             float enemyWeight = enemy.GetWeight();
-            if (enemyWeight < smallestWeight)
+            if (enemyWeight < smallestWeight) //fasle
             {
                 smallestWeight = enemyWeight;
                 this.smallestEnemey = enemy;
@@ -54,7 +56,6 @@ public class EnemyManager : MonoBehaviour
             //Debug.Log(enemy.GetObjName() + " " + enemy.GetWeight());
         }
     }
-
 
     protected virtual void LoadEnemeies()
     {
