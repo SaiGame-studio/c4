@@ -24,6 +24,11 @@ public abstract class Enemy : MonoBehaviour
 
     public abstract string GetName();
 
+    public virtual string GetObjName()
+    {
+        return transform.name;
+    }
+
     protected virtual void InitData()
     {
         this.weight = this.GetRandomWeight();
@@ -57,12 +62,23 @@ public abstract class Enemy : MonoBehaviour
         this.currentHp = newHp;
     }
 
-    float GetWeight()
+    public virtual float GetWeight()
     {
         return this.weight;
     }
 
-    bool IsBoss()
+    public virtual float GetMaxWeight()
+    {
+        return this.maxWeight;
+    }
+
+    public virtual float GetMinWeight()
+    {
+        return this.minWeight;
+    }
+
+
+    public virtual bool IsBoss()
     {
         return this.isBoss;
     }
