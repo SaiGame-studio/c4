@@ -51,7 +51,7 @@ public class EnemyManager : MonoBehaviour
                 this.biggestEnemey = enemy;
             }
 
-            Debug.Log(enemy.GetObjName() + " " + enemy.GetWeight());
+            //Debug.Log(enemy.GetObjName() + " " + enemy.GetWeight());
         }
     }
 
