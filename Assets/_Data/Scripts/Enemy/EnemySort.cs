@@ -20,7 +20,7 @@ public class EnemySort : MonoBehaviour
     void Start()
     {
         this.Sorting();
-        this.ShowEnemies();
+        //this.ShowEnemies();
     }
 
     protected virtual void LoadComponents()
