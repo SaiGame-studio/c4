@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyCtrl : SaiMonoBehaviour
 {
     [SerializeField] protected NavMeshAgent agent;
+    public NavMeshAgent Agent => agent;
 
     protected override void LoadComponents()
     {
