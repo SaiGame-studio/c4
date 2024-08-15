@@ -20,6 +20,9 @@ public class EnemyCtrl : SaiMonoBehaviour
     {
         if (this.agent != null) return;
         this.agent = GetComponent<NavMeshAgent>();
+        this.agent.speed = 2f;
+        this.agent.angularSpeed = 200f;
+        this.agent.acceleration = 150f;
         Debug.Log(transform.name + ": LoadNavMeshAgent", gameObject);
     }
 
@@ -27,7 +30,7 @@ public class EnemyCtrl : SaiMonoBehaviour
     {
         if (this.model != null) return;
         this.model = transform.Find("Model");
-        this.model.localPosition = new Vector3(0f, -0.6f, 0f);
+        this.model.localPosition = new Vector3(0f, 0f, 0f);
         Debug.Log(transform.name + ": LoadModel", gameObject);
     }
 }
