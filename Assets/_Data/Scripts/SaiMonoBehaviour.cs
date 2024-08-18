@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SaiMonoBehaviour : MonoBehaviour
 {
+    protected virtual void Start()
+    {
+        //
+    }
+
     protected virtual void Awake()
     {
         this.LoadComponents();
