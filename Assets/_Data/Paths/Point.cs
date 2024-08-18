@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Point : SaiMonoBehaviour
 {
-
     [SerializeField] protected Point nextPoint;
 
     protected override void LoadComponents()
@@ -21,8 +20,6 @@ public class Point : SaiMonoBehaviour
             Transform nextSibling = transform.parent.GetChild(siblingIndex + 1);
             this.nextPoint = nextSibling.GetComponent<Point>();
         }
-
-        Debug.Log(transform.name + " siblingIndex: " + siblingIndex);
         Debug.Log(transform.name + ": LoadNextPoint", gameObject);
     }
 }
