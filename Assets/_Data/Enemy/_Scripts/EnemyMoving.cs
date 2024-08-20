@@ -5,11 +5,13 @@ using UnityEngine.AI;
 
 public class EnemyMoving : SaiMonoBehaviour
 {
-    public GameObject target;
     [SerializeField] protected EnemyCtrl enemyCtrl;
-    [SerializeField] protected int pathIndex = 0;
     [SerializeField] protected string pathName = "path_1";
     [SerializeField] protected Path enemyPath;
+    [SerializeField] protected Point currentPoint;
+    [SerializeField] protected float pointDistance = Mathf.Infinity;
+    [SerializeField] protected float stopDistance = 1f;
+    [SerializeField] protected bool isFinish = false;
 
     protected override void Start()
     {
@@ -25,7 +27,6 @@ public class EnemyMoving : SaiMonoBehaviour
     {
         base.LoadComponents();
         this.LoadEnemyCtrl();
-        this.LoadTarget();
     }
 
 
@@ -36,16 +37,29 @@ public class EnemyMoving : SaiMonoBehaviour
         Debug.Log(transform.name + ": LoadEnemyCtrl", gameObject);
     }
 
-    protected virtual void LoadTarget()
-    {
-        if (this.target != null) return;
-        this.target = GameObject.Find("TargetMoving");
-        Debug.Log(transform.name + ": LoadTarget", gameObject);
-    }
 
     protected virtual void Moving()
     {
-        this.enemyCtrl.Agent.SetDestination(target.transform.position);
+        this.FindNextPoint();
+
+        if (this.currentPoint == null || this.isFinish == true) {
+            this.enemyCtrl.Agent.isStopped = true;
+            return;
+        }
+
+        this.enemyCtrl.Agent.SetDestination(this.currentPoint.transform.position);
+    }
+
+    protected virtual void FindNextPoint()
+    {
+        if(this.currentPoint == null) this.currentPoint = this.enemyPath.GetPoint(0);
+
+        this.pointDistance = Vector3.Distance(transform.position, this.currentPoint.transform.position);
+        if(this.pointDistance < this.stopDistance)
+        {
+            this.currentPoint = this.currentPoint.NextPoint;
+            if (this.currentPoint == null) this.isFinish = true;
+        }
     }
 
     protected virtual void LoadEnemyPath()

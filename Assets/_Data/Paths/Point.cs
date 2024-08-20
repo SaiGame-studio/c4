@@ -3,6 +3,7 @@ using UnityEngine;
 public class Point : SaiMonoBehaviour
 {
     [SerializeField] protected Point nextPoint;
+    public Point NextPoint => nextPoint;
 
     protected override void LoadComponents()
     {

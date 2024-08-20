@@ -751,9 +751,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 953307008}
   enemyCtrl: {fileID: 948537376}
-  pathIndex: 0
   pathName: path_1
   enemyPath: {fileID: 0}
+  currentPoint: {fileID: 0}
+  pointDistance: Infinity
+  stopDistance: 2
+  isFinish: 0
 --- !u!1 &509624180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,11 +1273,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8595c223baf96f4ebca6ef72930496f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 953307008}
+  target: {fileID: 0}
   enemyCtrl: {fileID: 303002476}
-  pathIndex: 0
   pathName: path_1
   enemyPath: {fileID: 0}
+  currentPoint: {fileID: 0}
+  pointDistance: Infinity
+  stopDistance: 2
+  isFinish: 0
 --- !u!1 &764394195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,6 +2661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: point_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8049232945007275153, guid: ebc4b36f5d7ba2f4397aa7f12fd48409, type: 3}
+      propertyPath: nextPoint
+      value: 
+      objectReference: {fileID: 1564608599}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2861,9 +2871,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 953307008}
   enemyCtrl: {fileID: 2105184311}
-  pathIndex: 0
   pathName: path_0
   enemyPath: {fileID: 0}
+  currentPoint: {fileID: 0}
+  pointDistance: Infinity
+  stopDistance: 2
+  isFinish: 0
 --- !u!1001 &1890174481
 PrefabInstance:
   m_ObjectHideFlags: 0
