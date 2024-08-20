@@ -8,6 +8,7 @@ public class EnemyMoving : SaiMonoBehaviour
     public GameObject target;
     [SerializeField] protected EnemyCtrl enemyCtrl;
     [SerializeField] protected int pathIndex = 0;
+    [SerializeField] protected string pathName = "path_1";
     [SerializeField] protected Path enemyPath;
 
     protected override void Start()
@@ -50,7 +51,7 @@ public class EnemyMoving : SaiMonoBehaviour
     protected virtual void LoadEnemyPath()
     {
         if (this.enemyPath != null) return;
-        this.enemyPath = PathsManager.Instance.GetPath(this.pathIndex);
+        this.enemyPath = PathsManager.Instance.GetPath(this.pathName);
         Debug.Log(transform.name + ": LoadEnemyCtrl", gameObject);
     }
 }

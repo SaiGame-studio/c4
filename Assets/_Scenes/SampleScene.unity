@@ -752,6 +752,7 @@ MonoBehaviour:
   target: {fileID: 953307008}
   enemyCtrl: {fileID: 948537376}
   pathIndex: 0
+  pathName: path_1
   enemyPath: {fileID: 0}
 --- !u!1 &509624180
 GameObject:
@@ -1272,6 +1273,7 @@ MonoBehaviour:
   target: {fileID: 953307008}
   enemyCtrl: {fileID: 303002476}
   pathIndex: 0
+  pathName: path_1
   enemyPath: {fileID: 0}
 --- !u!1 &764394195
 GameObject:
@@ -2860,6 +2862,7 @@ MonoBehaviour:
   target: {fileID: 953307008}
   enemyCtrl: {fileID: 2105184311}
   pathIndex: 0
+  pathName: path_0
   enemyPath: {fileID: 0}
 --- !u!1001 &1890174481
 PrefabInstance:
