@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MutantMoving : EnemyMoving
 {
-    //protected override void ResetValue()
-    //{
-    //    base.ResetValue();
-    //    this.pathName = "path_0";
-    //}
+    protected override void ResetValue()
+    {
+        base.ResetValue();
+        this.pathName = "path_0";
+    }
 }

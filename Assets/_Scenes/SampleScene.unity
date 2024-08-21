@@ -446,6 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 1495727159}
   agent: {fileID: 303002477}
+  animator: {fileID: 2038151832}
 --- !u!195 &303002477
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -456,7 +457,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 9
+  m_Speed: 2
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -759,6 +760,8 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   pointDistance: Infinity
   stopDistance: 1
+  canMove: 0
+  isMoving: 0
   isFinish: 0
 --- !u!1 &509624180
 GameObject:
@@ -1286,6 +1289,8 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   pointDistance: Infinity
   stopDistance: 1
+  canMove: 0
+  isMoving: 0
   isFinish: 0
 --- !u!1 &764394195
 GameObject:
@@ -1628,7 +1633,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 9
+  m_Speed: 2
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -1654,6 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 600076120}
   agent: {fileID: 948537375}
+  animator: {fileID: 1165098744}
 --- !u!1 &953307008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,15 +2897,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812538987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8595c223baf96f4ebca6ef72930496f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a750a673e3071f478faa362353faaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 2105184311}
-  pathName: path_1
+  pathName: path_0
   enemyPath: {fileID: 0}
   currentPoint: {fileID: 0}
   pointDistance: Infinity
   stopDistance: 1
+  canMove: 0
+  isMoving: 0
   isFinish: 0
 --- !u!1001 &1890174481
 PrefabInstance:
@@ -3304,7 +3312,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 9
+  m_Speed: 2
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -3330,6 +3338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 411793308}
   agent: {fileID: 2105184310}
+  animator: {fileID: 612338661}
 --- !u!1 &2135727215
 GameObject:
   m_ObjectHideFlags: 0

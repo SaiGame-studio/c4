@@ -11,6 +11,8 @@ public class EnemyMoving : SaiMonoBehaviour
     [SerializeField] protected Point currentPoint;
     [SerializeField] protected float pointDistance = Mathf.Infinity;
     [SerializeField] protected float stopDistance = 1f;
+    [SerializeField] protected bool canMove = false;
+    [SerializeField] protected bool isMoving = false;
     [SerializeField] protected bool isFinish = false;
 
     protected override void Start()
@@ -21,6 +23,7 @@ public class EnemyMoving : SaiMonoBehaviour
     void FixedUpdate()
     {
         this.Moving();
+        this.CheckMoving();
     }
 
     protected override void LoadComponents()
@@ -28,7 +31,6 @@ public class EnemyMoving : SaiMonoBehaviour
         base.LoadComponents();
         this.LoadEnemyCtrl();
     }
-
 
     protected virtual void LoadEnemyCtrl()
     {
@@ -40,15 +42,22 @@ public class EnemyMoving : SaiMonoBehaviour
 
     protected virtual void Moving()
     {
+
+        if (!this.canMove)
+        {
+            this.enemyCtrl.Agent.isStopped = true;
+            return;
+        }
+
         this.FindNextPoint();
 
-        if (this.currentPoint == null || this.isFinish == true) {
+        if (this.currentPoint == null || this.isFinish == true)
+        {
             this.enemyCtrl.Agent.isStopped = true;
             return;
         }
 
         this.enemyCtrl.Agent.isStopped = false;
-
         this.enemyCtrl.Agent.SetDestination(this.currentPoint.transform.position);
     }
 
@@ -69,5 +78,13 @@ public class EnemyMoving : SaiMonoBehaviour
         if (this.enemyPath != null) return;
         this.enemyPath = PathsManager.Instance.GetPath(this.pathName);
         //Debug.Log(transform.name + ": LoadEnemyPath", gameObject);
+    }
+
+    protected virtual void CheckMoving()
+    {
+        if (this.enemyCtrl.Agent.velocity.magnitude > 0.1f) this.isMoving = true;
+        else this.isMoving = false;
+
+        this.enemyCtrl.Animator.SetBool("isMoving", this.isMoving);
     }
 }
