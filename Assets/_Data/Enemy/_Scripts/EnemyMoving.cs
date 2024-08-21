@@ -47,6 +47,8 @@ public class EnemyMoving : SaiMonoBehaviour
             return;
         }
 
+        this.enemyCtrl.Agent.isStopped = false;
+
         this.enemyCtrl.Agent.SetDestination(this.currentPoint.transform.position);
     }
 
