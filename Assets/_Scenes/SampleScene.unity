@@ -457,7 +457,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.2
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -760,7 +760,7 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   pointDistance: Infinity
   stopDistance: 1
-  canMove: 0
+  canMove: 1
   isMoving: 0
   isFinish: 0
 --- !u!1 &509624180
@@ -995,7 +995,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0b3f51019e703d846849680bb2fe9cbd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   pointDistance: Infinity
   stopDistance: 1
-  canMove: 0
+  canMove: 1
   isMoving: 0
   isFinish: 0
 --- !u!1 &764394195
@@ -1633,7 +1633,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.2
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -2035,7 +2035,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0b3f51019e703d846849680bb2fe9cbd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2906,7 +2906,7 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   pointDistance: Infinity
   stopDistance: 1
-  canMove: 0
+  canMove: 1
   isMoving: 0
   isFinish: 0
 --- !u!1001 &1890174481
@@ -3259,7 +3259,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0b3f51019e703d846849680bb2fe9cbd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -3312,7 +3312,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.2
   m_Acceleration: 150
   avoidancePriority: 50
   m_AngularSpeed: 200

@@ -25,7 +25,7 @@ public class EnemyCtrl : SaiMonoBehaviour
     {
         if (this.agent != null) return;
         this.agent = GetComponent<NavMeshAgent>();
-        this.agent.speed = 2f;
+        this.agent.speed = 2.2f;
         this.agent.angularSpeed = 200f;
         this.agent.acceleration = 150f;
         Debug.Log(transform.name + ": LoadNavMeshAgent", gameObject);
@@ -43,6 +43,7 @@ public class EnemyCtrl : SaiMonoBehaviour
     {
         if (this.animator != null) return;
         this.animator = this.model.GetComponent<Animator>();
+        this.animator.applyRootMotion = true;
         Debug.Log(transform.name + ": LoadAnimator", gameObject);
     }
 }
