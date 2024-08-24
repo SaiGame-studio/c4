@@ -65,7 +65,7 @@ public class TowerTargeting : SaiMonoBehaviour
 
         foreach (EnemyCtrl enemyCtrl in this.enemies)
         {
-            if (collider.transform.parent.name == enemyCtrl.name)
+            if (collider.transform.parent == enemyCtrl.transform)
             {
                 this.enemies.Remove(enemyCtrl);
                 return;
@@ -73,29 +73,28 @@ public class TowerTargeting : SaiMonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
     protected virtual void FindNearest()
     {
         float nearestDistance = Mathf.Infinity;
         float enemyDistance;
-        foreach(EnemyCtrl enemyCtrl in this.enemies)
+        foreach (EnemyCtrl enemyCtrl in this.enemies)
         {
             enemyDistance = Vector3.Distance(transform.position, enemyCtrl.transform.position);
-            if(enemyDistance < nearestDistance)
+            if (enemyDistance < nearestDistance)
             {
                 nearestDistance = enemyDistance;
                 this.nearest = enemyCtrl;
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
 }
