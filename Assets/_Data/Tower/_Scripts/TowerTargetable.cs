@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SphereCollider))]
 public class TowerTargetable : SaiMonoBehaviour
 {
     [SerializeField] protected SphereCollider sphereCollider;
@@ -16,7 +15,7 @@ public class TowerTargetable : SaiMonoBehaviour
     {
         if (this.sphereCollider != null) return;
         this.sphereCollider = GetComponent<SphereCollider>();
-        this.sphereCollider.radius = 0.5f;
+        this.sphereCollider.radius = 0.2f;
         this.sphereCollider.isTrigger = true;
         Debug.Log(transform.name + ": LoadSphereCollider", gameObject);
     }
