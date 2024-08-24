@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCollider: {fileID: 362420557}
-  rigid: {fileID: 362420558}
+  rigid: {fileID: 0}
   nearest: {fileID: 0}
   enemies: []
 --- !u!135 &362420557
@@ -562,7 +562,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
