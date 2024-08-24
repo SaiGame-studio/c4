@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerCtrl : SaiMonoBehaviour
@@ -18,5 +16,4 @@ public class TowerCtrl : SaiMonoBehaviour
         this.model = transform.Find("Model");
         Debug.Log(transform.name + ": LoadModel", gameObject);
     }
-
 }
