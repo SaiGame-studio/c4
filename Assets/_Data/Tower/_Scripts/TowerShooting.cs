@@ -10,15 +10,12 @@ public class TowerShooting : TowerAbstract
     {
         base.Start();
         Invoke(nameof(this.TargetLoading), 1f);
-        //Invoke("TargetLoading", 1f);
     }
 
 
     protected void FixedUpdate()
     {
         this.LookingAtTarget();
-        //this.ShootAtTarget();
-        //this.TargetLoading();
     }
 
     protected virtual void TargetLoading()
