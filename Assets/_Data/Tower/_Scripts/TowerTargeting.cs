@@ -37,7 +37,7 @@ public class TowerTargeting : SaiMonoBehaviour
     {
         if (this.sphereCollider != null) return;
         this.sphereCollider = GetComponent<SphereCollider>();
-        this.sphereCollider.radius = 5f;
+        this.sphereCollider.radius = 15f;
         this.sphereCollider.isTrigger = true;
         Debug.Log(transform.name + ": LoadSphereCollider", gameObject);
     }
