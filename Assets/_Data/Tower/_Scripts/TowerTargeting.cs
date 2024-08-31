@@ -7,7 +7,10 @@ public class TowerTargeting : SaiMonoBehaviour
 {
     [SerializeField] protected SphereCollider sphereCollider;
     [SerializeField] protected Rigidbody rigid;
+    
     [SerializeField] protected EnemyCtrl nearest;
+    public EnemyCtrl Nearest => nearest;
+
     [SerializeField] protected List<EnemyCtrl> enemies = new();
 
     protected virtual void FixedUpdate()
