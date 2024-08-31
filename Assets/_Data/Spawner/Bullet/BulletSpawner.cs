@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BulletSpawner : Spawner
 {
+
     public virtual Bullet Spawn(Bullet bulletPrefab)
     {
         Bullet newObject = Instantiate(bulletPrefab);
+        newObject.Despawn.SetSpawner(this);
         return newObject;
     }
 
