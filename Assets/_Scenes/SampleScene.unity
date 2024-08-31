@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 248513287}
   - component: {fileID: 248513286}
   m_Layer: 0
-  m_Name: TowerTargeting
+  m_Name: TowerTargetable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +380,7 @@ Transform:
   m_GameObject: {fileID: 248513284}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: 0.276, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -515,6 +515,7 @@ MonoBehaviour:
   model: {fileID: 1495727159}
   agent: {fileID: 303002477}
   animator: {fileID: 2038151832}
+  towerTargetable: {fileID: 874914672}
 --- !u!195 &303002477
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1701,7 +1702,7 @@ GameObject:
   - component: {fileID: 874914673}
   - component: {fileID: 874914672}
   m_Layer: 0
-  m_Name: TowerTargeting
+  m_Name: TowerTargetable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1716,7 +1717,7 @@ Transform:
   m_GameObject: {fileID: 874914670}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.58, y: 0.276, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1895,6 +1896,7 @@ MonoBehaviour:
   model: {fileID: 600076120}
   agent: {fileID: 948537375}
   animator: {fileID: 1165098744}
+  towerTargetable: {fileID: 248513286}
 --- !u!1 &953307008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,9 +2141,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1112693134}
     m_Modifications:
+    - target: {fileID: 2234653650103809484, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191804154295543599, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191804154295543599, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191804154295543599, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191804154295543599, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191804154295543599, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5292559631066522209, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292559631066522209, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6316634261180420635, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
       propertyPath: m_LocalScale.x
@@ -2203,6 +2233,11 @@ PrefabInstance:
 --- !u!4 &1046926630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6316634261180420635, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
+  m_PrefabInstance: {fileID: 1046926629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1046926631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4847128504483780527, guid: 6fe9f585b95244544bb8a16fc6b8dcea, type: 3}
   m_PrefabInstance: {fileID: 1046926629}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1100461295
@@ -2314,6 +2349,7 @@ Transform:
   m_Children:
   - {fileID: 1046926630}
   - {fileID: 362420555}
+  - {fileID: 1460504052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112693135
@@ -2329,6 +2365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1046926630}
+  rotator: {fileID: 1046926631}
 --- !u!1 &1130968019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,6 +2540,7 @@ MonoBehaviour:
   model: {fileID: 1544088673}
   agent: {fileID: 1275905623}
   animator: {fileID: 1544088674}
+  towerTargetable: {fileID: 1282358670}
 --- !u!195 &1275905623
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2537,7 +2575,7 @@ GameObject:
   - component: {fileID: 1282358671}
   - component: {fileID: 1282358670}
   m_Layer: 0
-  m_Name: TowerTargeting
+  m_Name: TowerTargetable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2552,7 +2590,7 @@ Transform:
   m_GameObject: {fileID: 1282358668}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2746,6 +2784,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc4a377ef0f2d343a5ff0b9271a3e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1460504051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460504052}
+  - component: {fileID: 1460504053}
+  m_Layer: 0
+  m_Name: TowerShooting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1460504052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460504051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1112693134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1460504053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460504051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa85fa38de15e9347a9af5456105a349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerCtrl: {fileID: 1112693135}
+  target: {fileID: 2105184311}
 --- !u!1001 &1463887562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3849,7 +3933,7 @@ GameObject:
   - component: {fileID: 1966820737}
   - component: {fileID: 1966820736}
   m_Layer: 0
-  m_Name: TowerTargeting
+  m_Name: TowerTargetable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3864,7 +3948,7 @@ Transform:
   m_GameObject: {fileID: 1966820734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4047,6 +4131,7 @@ MonoBehaviour:
   model: {fileID: 411793308}
   agent: {fileID: 2105184310}
   animator: {fileID: 612338661}
+  towerTargetable: {fileID: 1966820736}
 --- !u!1 &2135727215
 GameObject:
   m_ObjectHideFlags: 0

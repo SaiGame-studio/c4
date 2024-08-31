@@ -73,17 +73,6 @@ public class TowerTargeting : SaiMonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
     protected virtual void FindNearest()
     {
         float nearestDistance = Mathf.Infinity;
