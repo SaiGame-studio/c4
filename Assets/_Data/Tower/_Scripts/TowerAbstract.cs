@@ -5,7 +5,6 @@ public abstract class TowerAbstract : SaiMonoBehaviour
 {
     [SerializeField] protected TowerCtrl towerCtrl;
 
-
     protected override void LoadComponents()
     {
         base.LoadComponents();
