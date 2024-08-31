@@ -1,4 +1,4 @@
 public class Const 
 {
-    public const string TOWER_TARGETABLE = "TowerTargeting";
+    public const string TOWER_TARGETABLE = "TowerTargetable";
 }
