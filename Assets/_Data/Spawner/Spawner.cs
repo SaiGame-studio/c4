@@ -9,4 +9,9 @@ public abstract class Spawner : SaiMonoBehaviour
         Transform newObject = Instantiate(prefab);
         return newObject;
     }
+
+    public virtual void Despawn(Transform prefab)
+    {
+        Destroy(prefab.gameObject);
+    }
 }
