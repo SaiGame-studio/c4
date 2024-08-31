@@ -550,6 +550,7 @@ Transform:
   m_Children:
   - {fileID: 1495727159}
   - {fileID: 715184704}
+  - {fileID: 2076529335}
   m_Father: {fileID: 556603858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &303002476
@@ -567,6 +568,7 @@ MonoBehaviour:
   model: {fileID: 1495727159}
   agent: {fileID: 303002477}
   animator: {fileID: 2038151832}
+  towerTargetable: {fileID: 0}
 --- !u!195 &303002477
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -728,8 +730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphereCollider: {fileID: 362420557}
   rigid: {fileID: 0}
-  nearest: {fileID: 0}
-  enemies: []
 --- !u!135 &362420557
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1345,6 +1345,7 @@ MonoBehaviour:
   model: {fileID: 1671813361}
   agent: {fileID: 580671634}
   animator: {fileID: 1671813362}
+  towerTargetable: {fileID: 0}
 --- !u!195 &580671634
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1935,6 +1936,7 @@ MonoBehaviour:
   model: {fileID: 337446876}
   agent: {fileID: 798094286}
   animator: {fileID: 337446877}
+  towerTargetable: {fileID: 0}
 --- !u!195 &798094286
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2101,6 +2103,7 @@ MonoBehaviour:
   model: {fileID: 882629590}
   agent: {fileID: 852511210}
   animator: {fileID: 882629591}
+  towerTargetable: {fileID: 0}
 --- !u!195 &852511210
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2366,6 +2369,7 @@ Transform:
   m_Children:
   - {fileID: 600076120}
   - {fileID: 508118402}
+  - {fileID: 1004850613}
   m_Father: {fileID: 556603858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &948537375
@@ -2405,6 +2409,7 @@ MonoBehaviour:
   model: {fileID: 600076120}
   agent: {fileID: 948537375}
   animator: {fileID: 1165098744}
+  towerTargetable: {fileID: 0}
 --- !u!1 &953307008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,6 +2646,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b141242032d3ed149a9d36596d1d3c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1004850612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004850613}
+  - component: {fileID: 1004850615}
+  - component: {fileID: 1004850614}
+  m_Layer: 0
+  m_Name: TowerTargeting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1004850613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004850612}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4, y: 0.276, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 948537373}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1004850614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004850612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5854a5b873cd05347b20b3441cb630bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereCollider: {fileID: 1004850615}
+--- !u!135 &1004850615
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004850612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1028111631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,6 +2964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1046926630}
+  towerRotator: {fileID: 0}
+  towerTargeting: {fileID: 0}
 --- !u!1 &1162639283
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,6 +3087,7 @@ MonoBehaviour:
   model: {fileID: 1432943948}
   agent: {fileID: 1292715932}
   animator: {fileID: 1432943949}
+  towerTargetable: {fileID: 0}
 --- !u!195 &1292715932
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4906,6 +4981,73 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2076529334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076529335}
+  - component: {fileID: 2076529337}
+  - component: {fileID: 2076529336}
+  m_Layer: 0
+  m_Name: TowerTargeting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076529335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076529334}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.58, y: 0.276, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 303002475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076529336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076529334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5854a5b873cd05347b20b3441cb630bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereCollider: {fileID: 2076529337}
+--- !u!135 &2076529337
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076529334}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2087414303
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,6 +5099,7 @@ MonoBehaviour:
   model: {fileID: 2125605880}
   agent: {fileID: 2087414306}
   animator: {fileID: 2125605881}
+  towerTargetable: {fileID: 0}
 --- !u!195 &2087414306
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5119,6 +5262,7 @@ MonoBehaviour:
   model: {fileID: 411793308}
   agent: {fileID: 2105184310}
   animator: {fileID: 612338661}
+  towerTargetable: {fileID: 0}
 --- !u!1001 &2125605878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5358,6 +5502,7 @@ MonoBehaviour:
   model: {fileID: 1814170569}
   agent: {fileID: 2142596334}
   animator: {fileID: 1814170570}
+  towerTargetable: {fileID: 0}
 --- !u!195 &2142596334
 NavMeshAgent:
   m_ObjectHideFlags: 0
