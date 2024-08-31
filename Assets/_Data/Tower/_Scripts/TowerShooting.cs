@@ -59,15 +59,23 @@ public class TowerShooting : TowerAbstract
 
         FirePoint firePoint = this.GetFirePoint();
         Bullet newBullet = this.towerCtrl.BulletSpawner.Spawn(this.towerCtrl.Bullet, firePoint.transform.position);
+        Vector3 rotatorDirection = this.towerCtrl.Rotator.transform.forward;
+        newBullet.transform.forward = rotatorDirection;
         newBullet.gameObject.SetActive(true);
     }
 
     protected virtual FirePoint GetFirePoint()
     {
         FirePoint firePoint = this.towerCtrl.FirePoints[this.currentFirePoint];
-
         this.currentFirePoint++;
         if (this.currentFirePoint == this.towerCtrl.FirePoints.Count) this.currentFirePoint = 0;
         return firePoint;
     }
 }
+
+
+
+
+
+
+
