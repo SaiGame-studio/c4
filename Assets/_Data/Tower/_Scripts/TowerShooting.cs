@@ -65,7 +65,6 @@ public class TowerShooting : TowerAbstract
     protected virtual FirePoint GetFirePoint()
     {
         FirePoint firePoint = this.towerCtrl.FirePoints[this.currentFirePoint];
-
         this.currentFirePoint++;
         if (this.currentFirePoint == this.towerCtrl.FirePoints.Count) this.currentFirePoint = 0;
         return firePoint;
