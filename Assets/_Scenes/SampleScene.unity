@@ -1841,6 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 948537376}
   spawner: {fileID: 1765897685}
+  isDespawnByTime: 0
   timeLife: 7
   currentTime: 7
 --- !u!1 &948537372
@@ -2902,6 +2903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 2105184311}
   spawner: {fileID: 1765897685}
+  isDespawnByTime: 1
   timeLife: 7
   currentTime: 7
 --- !u!1001 &1564608597
@@ -3166,6 +3168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 303002478}
   spawner: {fileID: 1765897685}
+  isDespawnByTime: 1
   timeLife: 7
   currentTime: 7
 --- !u!1001 &1689454068
