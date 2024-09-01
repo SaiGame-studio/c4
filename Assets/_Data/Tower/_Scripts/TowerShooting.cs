@@ -8,8 +8,6 @@ public class TowerShooting : TowerAbstract
     [SerializeField] protected float shootSpeed = 1f;
     [SerializeField] protected float rotationSpeed = 2f;
     [SerializeField] protected EnemyCtrl target;
-    [SerializeField] protected BulletSpawner bulletSpawner;
-    [SerializeField] protected Bullet bullet;
 
     protected override void Start()
     {
