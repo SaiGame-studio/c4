@@ -14,15 +14,37 @@ public class EnemySpawning : EnemyManagerAbstract
         Invoke(nameof(this.Spawning),this.spawnSpeed);
     }
 
+    protected virtual void FixedUpdate()
+    {
+        this.RemoveDeadOne();
+    }
+
     protected virtual void Spawning()
     {
         Invoke(nameof(this.Spawning), this.spawnSpeed);
+
+        if (this.spawnedEnemies.Count > this.maxSpawn) return;
+
+
         EnemyCtrl prefab = this.enemyManagerCtrl.EnemyPrefabs.GetRandom();
 
         EnemyCtrl newEnemy = this.enemyManagerCtrl.EnemySpawner.Spawn(prefab, transform.position);
         newEnemy.gameObject.SetActive(true);
 
+        this.spawnedEnemies.Add(newEnemy);
         Debug.Log("Spawning");
+    }
+
+    protected virtual void RemoveDeadOne()
+    {
+        foreach(EnemyCtrl enemyCtrl in this.spawnedEnemies)
+        {
+            if (enemyCtrl.EnemyDamageRecevier.IsDead())
+            {
+                this.spawnedEnemies.Remove(enemyCtrl);
+                return;
+            }
+        }
     }
 
 }

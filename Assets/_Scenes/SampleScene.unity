@@ -527,6 +527,7 @@ MonoBehaviour:
   agent: {fileID: 303002477}
   animator: {fileID: 2038151832}
   towerTargetable: {fileID: 874914672}
+  enemyDamageRecevier: {fileID: 1058018909}
 --- !u!1 &355530227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1922,7 @@ MonoBehaviour:
   agent: {fileID: 948537375}
   animator: {fileID: 1165098744}
   towerTargetable: {fileID: 248513286}
+  enemyDamageRecevier: {fileID: 953228305}
 --- !u!1 &953228303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,7 +2905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 2105184311}
   spawner: {fileID: 1765897685}
-  isDespawnByTime: 1
+  isDespawnByTime: 0
   timeLife: 7
   currentTime: 7
 --- !u!1001 &1564608597
@@ -3168,7 +3170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 303002478}
   spawner: {fileID: 1765897685}
-  isDespawnByTime: 1
+  isDespawnByTime: 0
   timeLife: 7
   currentTime: 7
 --- !u!1001 &1689454068
@@ -3908,6 +3910,7 @@ MonoBehaviour:
   agent: {fileID: 2105184310}
   animator: {fileID: 612338661}
   towerTargetable: {fileID: 1966820736}
+  enemyDamageRecevier: {fileID: 96828879}
 --- !u!114 &381834157542983664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3950,6 +3953,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1112693134}
     m_Modifications:
+    - target: {fileID: 29953701027380382, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
+      propertyPath: damage
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2170133634876166735, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: spawner
       value: 
