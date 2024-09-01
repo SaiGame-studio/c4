@@ -244,7 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f691806e3fe147bcf9f69fa17505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImmotal: 1
   capsuleCollider: {fileID: 96828880}
+  enemyCtrl: {fileID: 0}
 --- !u!136 &96828880
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1244,7 +1246,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612338660}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e35b87e3e7e85ed418f08f059e7c590b, type: 3}
   m_Controller: {fileID: 9100000, guid: 0b3f51019e703d846849680bb2fe9cbd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2074,7 +2076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f691806e3fe147bcf9f69fa17505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImmotal: 0
   capsuleCollider: {fileID: 953228306}
+  enemyCtrl: {fileID: 0}
 --- !u!136 &953228306
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2468,7 +2472,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f691806e3fe147bcf9f69fa17505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImmotal: 0
   capsuleCollider: {fileID: 1058018910}
+  enemyCtrl: {fileID: 0}
 --- !u!136 &1058018910
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2683,7 +2689,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165098743}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 533b1d11b7e81ac44ab2ec7fd5ae0ca5, type: 3}
   m_Controller: {fileID: 9100000, guid: 0b3f51019e703d846849680bb2fe9cbd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
