@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Spawner : SaiMonoBehaviour
 {
+    [SerializeField] protected int spawnCount = 0;
+
     public virtual Transform Spawn(Transform prefab)
     {
         Transform newObject = Instantiate(prefab);
@@ -13,5 +15,10 @@ public abstract class Spawner : SaiMonoBehaviour
     public virtual void Despawn(Transform prefab)
     {
         Destroy(prefab.gameObject);
+    }
+
+    protected virtual void UpdateName(Transform prefab, Transform newObject)
+    {
+        newObject.name = prefab.name + "_" + this.spawnCount;
     }
 }

@@ -9,6 +9,8 @@ public class BulletSpawner : Spawner
     {
         Bullet newObject = Instantiate(bulletPrefab);
         newObject.Despawn.SetSpawner(this);
+        this.spawnCount++;
+        this.UpdateName(bulletPrefab.transform, newObject.transform);
         return newObject;
     }
 
