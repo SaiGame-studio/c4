@@ -5,7 +5,10 @@ using UnityEngine;
 public class EnemyManagerCtrl : SaiMonoBehaviour
 {
     [SerializeField] protected EnemySpawner enemySpawner;
+    public EnemySpawner EnemySpawner => enemySpawner;
+
     [SerializeField] protected EnemyPrefabs enemyPrefabs;
+    public EnemyPrefabs EnemyPrefabs  => enemyPrefabs;
 
     protected override void LoadComponents()
     {
