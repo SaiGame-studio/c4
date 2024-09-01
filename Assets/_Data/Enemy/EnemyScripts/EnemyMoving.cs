@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyMoving : SaiMonoBehaviour
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
-    [SerializeField] protected string pathName = "path_1";
+    [SerializeField] protected string pathName = "path_0";
     [SerializeField] protected Path enemyPath;
     [SerializeField] protected Point currentPoint;
     [SerializeField] protected float pointDistance = Mathf.Infinity;
@@ -44,6 +44,12 @@ public class EnemyMoving : SaiMonoBehaviour
     {
 
         if (!this.canMove)
+        {
+            this.enemyCtrl.Agent.isStopped = true;
+            return;
+        }
+
+        if (this.enemyCtrl.EnemyDamageRecevier.IsDead())
         {
             this.enemyCtrl.Agent.isStopped = true;
             return;

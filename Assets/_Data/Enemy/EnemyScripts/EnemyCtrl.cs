@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +14,9 @@ public abstract class EnemyCtrl : PoolObj
     [SerializeField] protected TowerTargetable towerTargetable;
     public TowerTargetable TowerTargetable => towerTargetable;
 
+    [SerializeField] protected EnemyDamageRecevier enemyDamageRecevier;
+    public EnemyDamageRecevier EnemyDamageRecevier => enemyDamageRecevier;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -23,6 +24,14 @@ public abstract class EnemyCtrl : PoolObj
         this.LoadModel();
         this.LoadTowerTargetable();
         this.LoadAnimator();
+        this.LoadEnemyDamageRecevier();
+    }
+
+    protected virtual void LoadEnemyDamageRecevier()
+    {
+        if (this.enemyDamageRecevier != null) return;
+        this.enemyDamageRecevier = GetComponentInChildren<EnemyDamageRecevier>();
+        Debug.Log(transform.name + ": LoadEnemyDamageRecevier", gameObject);
     }
 
     protected virtual void LoadNavMeshAgent()
