@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletCtrl : MonoBehaviour
+public class BulletCtrl : SaiMonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] protected Bullet bullet;
+    public Bullet Bullet => bullet;
+
+    protected override void LoadComponents()
     {
-        
+        base.LoadComponents();
+        this.LoadBullet();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void LoadBullet()
     {
-        
+        if (this.bullet != null) return;
+        this.bullet = GetComponent<Bullet>();
+        Debug.Log(transform.name + ": LoadBullet", gameObject);
     }
+
 }
