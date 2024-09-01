@@ -572,6 +572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyManagerCtrl: {fileID: 556603859}
+  spawnSpeed: 1
+  maxSpawn: 10
 --- !u!1 &362420554
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 948537376}
-  pathName: path_1
+  pathName: path_0
   enemyPath: {fileID: 0}
   currentPoint: {fileID: 0}
   pointDistance: Infinity
@@ -1464,7 +1466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 303002478}
-  pathName: path_1
+  pathName: path_0
   enemyPath: {fileID: 0}
   currentPoint: {fileID: 0}
   pointDistance: Infinity
@@ -3481,7 +3483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCtrl: {fileID: 2105184311}
-  pathName: path_0
+  pathName: path_1
   enemyPath: {fileID: 0}
   currentPoint: {fileID: 0}
   pointDistance: Infinity

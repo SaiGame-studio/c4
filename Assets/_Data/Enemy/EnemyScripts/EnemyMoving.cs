@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyMoving : SaiMonoBehaviour
 {
     [SerializeField] protected EnemyCtrl enemyCtrl;
-    [SerializeField] protected string pathName = "path_1";
+    [SerializeField] protected string pathName = "path_0";
     [SerializeField] protected Path enemyPath;
     [SerializeField] protected Point currentPoint;
     [SerializeField] protected float pointDistance = Mathf.Infinity;
