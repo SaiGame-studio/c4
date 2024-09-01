@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageRecever : SaiMonoBehaviour
+public abstract class DamageRecever : SaiMonoBehaviour
 {
     protected int maxHP = 10;
     protected int currentHP = 10;
