@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public abstract class DamageRecever : SaiMonoBehaviour
 {
     protected int maxHP = 10;
@@ -11,7 +10,7 @@ public abstract class DamageRecever : SaiMonoBehaviour
 
     public virtual int Deduct(int hp)
     {
-        this.maxHP -= hp;
+        this.currentHP -= hp;
         this.IsDead();
 
         if (this.currentHP < 0) this.currentHP = 0;
