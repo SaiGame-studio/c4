@@ -1520,6 +1520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794979d1528b4104cad2c2a891f7328c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnCount: 0
+  inPoolObjs: []
 --- !u!1 &764394195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,8 +2885,6 @@ MonoBehaviour:
   shootSpeed: 1
   rotationSpeed: 2
   target: {fileID: 0}
-  bulletSpawner: {fileID: 0}
-  bullet: {fileID: 0}
 --- !u!1001 &1463887562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4317,6 +4317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1112693134}
     m_Modifications:
+    - target: {fileID: 2170133634876166735, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 156523060}
     - target: {fileID: 3970599516928754152, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: m_Name
       value: Bullet
