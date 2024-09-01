@@ -2896,7 +2896,7 @@ MonoBehaviour:
   towerCtrl: {fileID: 1112693135}
   currentFirePoint: 0
   targetLoadSpeed: 1
-  shootSpeed: 1
+  shootSpeed: 0.5
   rotationSpeed: 2
   target: {fileID: 0}
 --- !u!1001 &1463887562
