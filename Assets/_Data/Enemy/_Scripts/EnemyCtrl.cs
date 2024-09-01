@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyCtrl : SaiMonoBehaviour
+public abstract class EnemyCtrl : PoolObj
 {
     [SerializeField] protected Transform model;
 
@@ -42,7 +42,6 @@ public class EnemyCtrl : SaiMonoBehaviour
         this.model.localPosition = new Vector3(0f, 0f, 0f);
         Debug.Log(transform.name + ": LoadModel", gameObject);
     }
-
 
     protected virtual void LoadTowerTargetable()
     {
