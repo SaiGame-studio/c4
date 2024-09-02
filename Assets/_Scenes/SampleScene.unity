@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 190542011}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 0, z: -15.75}
+  m_LocalPosition: {x: -23.8, y: 0, z: -12.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1094,7 +1094,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 29953701027380382, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: damage
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2170133634876166735, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: spawner
@@ -1212,11 +1212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d369e51f91dc5834fbce16543081facf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyManagerCtrl: {fileID: 556603859}
   prefabs:
   - {fileID: 2105184311}
   - {fileID: 948537376}
   - {fileID: 303002478}
+  enemyManagerCtrl: {fileID: 556603859}
 --- !u!1001 &600076119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2612,7 +2612,7 @@ Transform:
   m_GameObject: {fileID: 1112693133}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 0, z: -20.17}
+  m_LocalPosition: {x: -23.8, y: 0, z: -17.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
