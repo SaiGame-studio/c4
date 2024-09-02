@@ -665,6 +665,9 @@ MonoBehaviour:
   sphereCollider: {fileID: 362420557}
   rigid: {fileID: 362420558}
   nearest: {fileID: 0}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   enemies: []
 --- !u!135 &362420557
 SphereCollider:
@@ -2612,7 +2615,7 @@ Transform:
   m_GameObject: {fileID: 1112693133}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 0, z: -17.35}
+  m_LocalPosition: {x: -23.69, y: 0, z: -16.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3934,6 +3937,9 @@ MonoBehaviour:
   sphereCollider: {fileID: 1865229676}
   rigid: {fileID: 1865229675}
   nearest: {fileID: 0}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   enemies: []
 --- !u!54 &1865229675
 Rigidbody:
