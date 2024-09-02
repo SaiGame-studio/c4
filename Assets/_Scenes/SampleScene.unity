@@ -4470,10 +4470,6 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 6851589009195276629, guid: 9aabbb84f6b37ba41b7d7487be69bb5c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6851589009195276629, guid: 9aabbb84f6b37ba41b7d7487be69bb5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

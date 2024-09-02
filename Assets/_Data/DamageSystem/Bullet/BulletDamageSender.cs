@@ -23,7 +23,6 @@ public class BulletDamageSender : DamageSender
         Debug.Log(transform.name + ": LoadBulletSpawner", gameObject);
     }
 
-
     protected virtual void LoadSphereCollider()
     {
         if (this.sphereCollider != null) return;

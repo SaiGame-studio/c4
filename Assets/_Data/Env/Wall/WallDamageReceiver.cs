@@ -26,5 +26,4 @@ public class WallDamageReceiver : DamageRecever
         base.ResetValue();
         this.isImmotal = true;
     }
-
 }
