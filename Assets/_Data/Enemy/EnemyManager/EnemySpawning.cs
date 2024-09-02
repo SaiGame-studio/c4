@@ -25,14 +25,10 @@ public class EnemySpawning : EnemyManagerAbstract
 
         if (this.spawnedEnemies.Count > this.maxSpawn) return;
 
-
         EnemyCtrl prefab = this.enemyManagerCtrl.EnemyPrefabs.GetRandom();
-
         EnemyCtrl newEnemy = this.enemyManagerCtrl.EnemySpawner.Spawn(prefab, transform.position);
         newEnemy.gameObject.SetActive(true);
-
         this.spawnedEnemies.Add(newEnemy);
-        Debug.Log("Spawning");
     }
 
     protected virtual void RemoveDeadOne()
