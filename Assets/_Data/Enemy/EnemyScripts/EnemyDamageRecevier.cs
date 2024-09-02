@@ -37,11 +37,18 @@ public class EnemyDamageRecevier : DamageRecever
     {
         base.OnDead();
         this.enemyCtrl.Animator.SetBool("isDead", this.isDead);
+        this.capsuleCollider.enabled = false;
+        Invoke(nameof(this.Disappear), 5f);
     }
 
     protected override void OnHurt()
     {
         base.OnHurt();
         this.enemyCtrl.Animator.SetTrigger("isHurt");
+    }
+
+    protected virtual void Disappear()
+    {
+        this.enemyCtrl.Despawn.DoDespawn();
     }
 }

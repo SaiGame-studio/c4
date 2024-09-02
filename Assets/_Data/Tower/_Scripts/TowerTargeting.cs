@@ -7,7 +7,7 @@ public class TowerTargeting : SaiMonoBehaviour
 {
     [SerializeField] protected SphereCollider sphereCollider;
     [SerializeField] protected Rigidbody rigid;
-    
+
     [SerializeField] protected EnemyCtrl nearest;
     public EnemyCtrl Nearest => nearest;
 
@@ -16,11 +16,11 @@ public class TowerTargeting : SaiMonoBehaviour
     protected virtual void FixedUpdate()
     {
         this.FindNearest();
+        this.RemoveDeadEnemy();
     }
 
     protected virtual void OnTriggerEnter(Collider collider)
     {
-        //Debug.Log("OnTriggerEnter: " + collider.name);
         this.AddEnemy(collider);
     }
 
@@ -57,15 +57,15 @@ public class TowerTargeting : SaiMonoBehaviour
     {
         if (collider.name != Const.TOWER_TARGETABLE) return;
         EnemyCtrl enemyCtrl = collider.transform.parent.GetComponent<EnemyCtrl>();
+
+        if (enemyCtrl.EnemyDamageRecevier.IsDead()) return;
+
         this.enemies.Add(enemyCtrl);
-        //Debug.Log("AddEnemy: " + collider.name);
     }
 
 
     protected virtual void RemoveEnemy(Collider collider)
     {
-        //Debug.Log("RemoveEnemy: " + collider.name);
-
         foreach (EnemyCtrl enemyCtrl in this.enemies)
         {
             if (collider.transform.parent.name == enemyCtrl.name)
@@ -80,13 +80,26 @@ public class TowerTargeting : SaiMonoBehaviour
     {
         float nearestDistance = Mathf.Infinity;
         float enemyDistance;
-        foreach(EnemyCtrl enemyCtrl in this.enemies)
+        foreach (EnemyCtrl enemyCtrl in this.enemies)
         {
             enemyDistance = Vector3.Distance(transform.position, enemyCtrl.transform.position);
-            if(enemyDistance < nearestDistance)
+            if (enemyDistance < nearestDistance)
             {
                 nearestDistance = enemyDistance;
                 this.nearest = enemyCtrl;
+            }
+        }
+    }
+
+    protected virtual void RemoveDeadEnemy()
+    {
+        foreach (EnemyCtrl enemyCtrl in this.enemies)
+        {
+            if (enemyCtrl.EnemyDamageRecevier.IsDead())
+            {
+                if (enemyCtrl == this.nearest) this.nearest = null;
+                this.enemies.Remove(enemyCtrl);
+                return;
             }
         }
     }
