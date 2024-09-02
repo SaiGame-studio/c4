@@ -62,8 +62,6 @@ public class TowerCtrl : SaiMonoBehaviour
         this.LoadBullet();
     }
 
-
-
     protected virtual void LoadModel()
     {
         if (this.model != null) return;
@@ -78,7 +76,6 @@ public class TowerCtrl : SaiMonoBehaviour
         this.towerTargeting = transform.GetComponentInChildren<TowerTargeting>();
         Debug.Log(transform.name + ": LoadTowerTargeting", gameObject);
     }
-
 
     protected virtual void LoadFirePoints()
     {

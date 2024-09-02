@@ -10,6 +10,7 @@ public class TowerTargeting : SaiMonoBehaviour
 
     [SerializeField] protected EnemyCtrl nearest;
     public EnemyCtrl Nearest => nearest;
+    [SerializeField] protected LayerMask obstacleLayerMask;
 
     [SerializeField] protected List<EnemyCtrl> enemies = new();
 
@@ -82,6 +83,8 @@ public class TowerTargeting : SaiMonoBehaviour
         float enemyDistance;
         foreach (EnemyCtrl enemyCtrl in this.enemies)
         {
+            if (!this.CanSeeTarget(enemyCtrl)) continue;
+
             enemyDistance = Vector3.Distance(transform.position, enemyCtrl.transform.position);
             if (enemyDistance < nearestDistance)
             {
@@ -89,6 +92,24 @@ public class TowerTargeting : SaiMonoBehaviour
                 this.nearest = enemyCtrl;
             }
         }
+    }
+
+    protected virtual bool CanSeeTarget(EnemyCtrl target)
+    {
+        Vector3 directionToTarget = target.transform.position - transform.position;
+        float distanceToTarget = directionToTarget.magnitude;
+
+        if (Physics.Raycast(transform.position, directionToTarget, out RaycastHit hitInfo, distanceToTarget, obstacleLayerMask))
+        {
+            Vector3 directionToCollider = hitInfo.point - transform.position;
+            float distanceToCollider = directionToCollider.magnitude;
+
+            Debug.DrawRay(transform.position, directionToCollider.normalized * distanceToCollider, Color.red);
+            return false;
+        }
+
+        Debug.DrawRay(transform.position, directionToTarget.normalized * distanceToTarget, Color.green);
+        return true;
     }
 
     protected virtual void RemoveDeadEnemy()
