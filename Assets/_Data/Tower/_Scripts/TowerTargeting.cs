@@ -10,7 +10,7 @@ public class TowerTargeting : SaiMonoBehaviour
 
     [SerializeField] protected EnemyCtrl nearest;
     public EnemyCtrl Nearest => nearest;
-    [SerializeField] protected LayerMask obstacleLayerMask;
+    [SerializeField] protected LayerMask obstacleLayerMask = -1;
 
     [SerializeField] protected List<EnemyCtrl> enemies = new();
 
