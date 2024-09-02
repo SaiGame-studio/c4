@@ -5,12 +5,20 @@ using UnityEngine;
 public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
 {
     [SerializeField] protected int spawnCount = 0;
+    [SerializeField] protected PoolHolder poolHolder;
     [SerializeField] protected List<T> inPoolObjs = new();
 
-    public virtual Transform Spawn(Transform prefab)
+    protected override void LoadComponents()
     {
-        Transform newObject = Instantiate(prefab);
-        return newObject;
+        base.LoadComponents();
+        this.LoadPoolHolder();
+    }
+
+    protected virtual void LoadPoolHolder()
+    {
+        if (this.poolHolder != null) return;
+        this.poolHolder = transform.GetComponentInChildren<PoolHolder>();
+        Debug.Log(transform.name + ": LoadBullet", gameObject);
     }
 
     public virtual T Spawn(T prefab)
@@ -23,6 +31,8 @@ public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
             this.spawnCount++;
             this.UpdateName(prefab.transform, newObject.transform);
         }
+
+        if (this.poolHolder != null) newObject.transform.parent = this.poolHolder.transform;
 
         return newObject;
     }
