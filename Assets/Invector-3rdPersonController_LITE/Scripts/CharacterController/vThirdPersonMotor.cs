@@ -108,7 +108,6 @@ namespace Invector.vCharacterController
         public void Init()
         {
             animator = GetComponent<Animator>();
-            if (animator == null) animator = transform.GetComponentInChildren<Animator>();
             animator.updateMode = AnimatorUpdateMode.AnimatePhysics;
 
             // slides the character through walls and edges
