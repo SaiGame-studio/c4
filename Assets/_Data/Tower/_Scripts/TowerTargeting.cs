@@ -105,7 +105,7 @@ public class TowerTargeting : SaiMonoBehaviour
         {
             Vector3 directionToCollider = hitInfo.point - transform.position;
             float distanceToCollider = directionToCollider.magnitude;
-
+            
             Debug.DrawRay(transform.position, directionToCollider.normalized * distanceToCollider, Color.red);
             return false;
         }

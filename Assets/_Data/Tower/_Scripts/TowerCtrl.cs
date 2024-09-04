@@ -74,6 +74,7 @@ public class TowerCtrl : SaiMonoBehaviour
     {
         if (this.towerTargeting != null) return;
         this.towerTargeting = transform.GetComponentInChildren<TowerTargeting>();
+        this.towerTargeting.transform.localPosition = new Vector3(0, 1, 0);
         Debug.Log(transform.name + ": LoadTowerTargeting", gameObject);
     }
 
