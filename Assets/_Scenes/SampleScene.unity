@@ -382,7 +382,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1922426385}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2700874171910072504, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
       propertyPath: m_Name
@@ -390,15 +390,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.022680283
+      value: -23.75168
       objectReference: {fileID: 0}
     - target: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.868859
+      value: 2.127859
       objectReference: {fileID: 0}
     - target: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2196884
+      value: -22.147688
       objectReference: {fileID: 0}
     - target: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3005,11 +3005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc4a377ef0f2d343a5ff0b9271a3e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1408835582 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
-  m_PrefabInstance: {fileID: 131148016}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1460504051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4234,7 +4229,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1408835582}
   - {fileID: 6403595513020357671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4259,9 +4253,9 @@ MonoBehaviour:
     movementSmooth: 6
     animationSmooth: 0.2
     rotationSpeed: 16
-    walkByDefault: 0
-    rotateWithCamera: 0
-    walkSpeed: 2
+    walkByDefault: 1
+    rotateWithCamera: 1
+    walkSpeed: 1
     runningSpeed: 4
     sprintSpeed: 6
   strafeSpeed:
@@ -4306,10 +4300,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.29
-  m_Height: 1.9
+  m_Radius: 0.2
+  m_Height: 1.2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!54 &1922426388
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4351,7 +4345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: Horizontal
   verticallInput: Vertical
-  jumpInput: 32
+  jumpInput: 0
   strafeInput: 9
   sprintInput: 304
   rotateCameraXInput: Mouse X
@@ -4982,4 +4976,5 @@ SceneRoots:
   - {fileID: 790180401}
   - {fileID: 29642567}
   - {fileID: 1144047764}
+  - {fileID: 131148016}
   - {fileID: 1922426385}
