@@ -423,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
 --- !u!1 &157858976
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 362420558}
   - component: {fileID: 362420557}
   - component: {fileID: 362420556}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TowerTargeting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2752,6 +2752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a724fedc2e7466c439251044959112d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCtrl: {fileID: 0}
 --- !u!1001 &1046926629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3650,6 +3651,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc4a377ef0f2d343a5ff0b9271a3e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1480430581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480430582}
+  - component: {fileID: 1480430583}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480430582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480430581}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1635947454}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480430583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480430581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5d325e30043b3428d93c3f085f87ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1495727158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4115,6 +4160,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6851589009195276629, guid: 9aabbb84f6b37ba41b7d7487be69bb5c, type: 3}
   m_PrefabInstance: {fileID: 1628387762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1635947453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635947454}
+  m_Layer: 0
+  m_Name: == Managers ====
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635947454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635947453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1480430582}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647629611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,7 +4586,7 @@ GameObject:
   - component: {fileID: 1865229675}
   - component: {fileID: 1865229676}
   - component: {fileID: 1865229674}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TowerTargeting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,6 +4900,7 @@ GameObject:
   - component: {fileID: 1922426388}
   - component: {fileID: 1922426387}
   - component: {fileID: 1922426390}
+  - component: {fileID: 1922426391}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4989,6 +5067,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1922426391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922426384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb6ed30dd1a72f4790c0728741adf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thirdPersonCtrl: {fileID: 1922426386}
+  thirdPersonCamera: {fileID: 2700874171787444299}
 --- !u!1 &1923364304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5927,3 +6019,4 @@ SceneRoots:
   - {fileID: 1887394825}
   - {fileID: 1908268345}
   - {fileID: 292997076}
+  - {fileID: 1635947454}
