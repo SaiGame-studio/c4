@@ -423,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
 --- !u!1 &157858976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,6 +5111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thirdPersonCtrl: {fileID: 1922426386}
   thirdPersonCamera: {fileID: 2700874171787444299}
+  crosshairPointer: {fileID: 156886706}
 --- !u!1 &1923364304
 GameObject:
   m_ObjectHideFlags: 0
