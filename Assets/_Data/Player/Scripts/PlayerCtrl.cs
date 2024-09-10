@@ -12,19 +12,30 @@ public class PlayerCtrl : SaiMonoBehaviour
     [SerializeField] protected vThirdPersonCamera thirdPersonCamera;
     public vThirdPersonCamera ThirdPersonCamera => thirdPersonCamera;
 
+    [SerializeField] protected CrosshairPointer crosshairPointer;
+    public CrosshairPointer CrosshairPointer => crosshairPointer;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadThirdPersonCtrl();
         this.LoadThirdPersonCamera();
+        this.LoadCrosshairPointer();
     }
 
+    protected virtual void LoadCrosshairPointer()
+    {
+        if (this.crosshairPointer != null) return;
+        this.crosshairPointer = GetComponentInChildren<CrosshairPointer>();
+        Debug.Log(transform.name + ": LoadCrosshairPointer", gameObject);
+    }
     protected virtual void LoadThirdPersonCtrl()
     {
         if (this.thirdPersonCtrl != null) return;
         this.thirdPersonCtrl = GetComponent<vThirdPersonController>();
         Debug.Log(transform.name + ": LoadThirPersonCtrl", gameObject);
     }
+
 
     protected virtual void LoadThirdPersonCamera()
     {
