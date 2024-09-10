@@ -5575,7 +5575,7 @@ MonoBehaviour:
     m_Bits: 1
   lockCamera: 0
   rightOffset: 0.6
-  defaultDistance: 0.7
+  defaultDistance: 1
   height: 1.4
   smoothFollow: 10
   xMouseSensitivity: 3
