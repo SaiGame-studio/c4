@@ -5,7 +5,7 @@ public class CrosshairPointer : SaiMonoBehaviour
     protected float maxDistance = 100f;
     [SerializeField] LayerMask layerMask = -1;
 
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
         this.Pointing();
     }
