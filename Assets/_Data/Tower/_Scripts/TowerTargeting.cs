@@ -67,6 +67,9 @@ public class TowerTargeting : SaiMonoBehaviour
 
     protected virtual void RemoveEnemy(Collider collider)
     {
+        //Co tinh khong chi, de cac ban tu fix bug nay
+        if (collider.name != Const.TOWER_TARGETABLE) return;
+
         foreach (EnemyCtrl enemyCtrl in this.enemies)
         {
             if (collider.transform.parent.name == enemyCtrl.name)
