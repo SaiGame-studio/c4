@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerAiming : PlayerAbstract
 {
+    [SerializeField] protected bool isAlwaysAiming = false;
     protected float closeLookDistance = 0.6f;
     protected float farLookDistance = 1.3f;
 
@@ -12,7 +13,7 @@ public class PlayerAiming : PlayerAbstract
 
     protected virtual void Aiming()
     {
-        if (InputManager.Instance.IsRightClick()) this.LookClose();
+        if (this.isAlwaysAiming || InputManager.Instance.IsRightClick()) this.LookClose();
         else this.LookFar();
     }
 

@@ -2795,6 +2795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCtrl: {fileID: 1922426391}
+  isAlwaysAiming: 0
 --- !u!1001 &1046926629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5124,6 +5125,7 @@ MonoBehaviour:
   thirdPersonCamera: {fileID: 2700874171787444299}
   crosshairPointer: {fileID: 156886706}
   aimingRig: {fileID: 849302817}
+  animator: {fileID: 0}
 --- !u!1 &1923364304
 GameObject:
   m_ObjectHideFlags: 0
@@ -6004,6 +6006,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2190799151736871447, guid: 5e173abb01694764d8d3560bd83a988d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997163990930218842, guid: 5e173abb01694764d8d3560bd83a988d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
