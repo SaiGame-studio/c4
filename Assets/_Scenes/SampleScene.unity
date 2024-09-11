@@ -2165,6 +2165,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc4a377ef0f2d343a5ff0b9271a3e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &849302817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4334768555004768351, guid: 5e173abb01694764d8d3560bd83a988d, type: 3}
+  m_PrefabInstance: {fileID: 7713992388176004374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874914670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,6 +5123,7 @@ MonoBehaviour:
   thirdPersonCtrl: {fileID: 1922426386}
   thirdPersonCamera: {fileID: 2700874171787444299}
   crosshairPointer: {fileID: 156886706}
+  aimingRig: {fileID: 849302817}
 --- !u!1 &1923364304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5902,6 +5914,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1922426385}
     m_Modifications:
+    - target: {fileID: 72598958128150176, guid: 5e173abb01694764d8d3560bd83a988d, type: 3}
+      propertyPath: m_Data.m_SourceObjects.m_Item0.transform
+      value: 
+      objectReference: {fileID: 156886705}
     - target: {fileID: 1876051093376775185, guid: 5e173abb01694764d8d3560bd83a988d, type: 3}
       propertyPath: m_Name
       value: Model
