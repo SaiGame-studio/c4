@@ -31,7 +31,7 @@ public class PlayerCtrl : SaiMonoBehaviour
     protected virtual void LoadAimingRig()
     {
         if (this.aimingRig != null) return;
-        //this.aimingRig = transform.Find("Model").Find("AimingRig").GetComponent<Rig>();
+        this.aimingRig = transform.Find("Model").Find("AimingRig").GetComponent<Rig>();
         Debug.Log(transform.name + ": LoadAimingRig", gameObject);
     }
 
