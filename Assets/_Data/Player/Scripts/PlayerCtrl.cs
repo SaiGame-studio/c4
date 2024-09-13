@@ -19,6 +19,9 @@ public class PlayerCtrl : SaiMonoBehaviour
     [SerializeField] protected Rig aimingRig;
     public Rig AimingRig => aimingRig;
 
+    [SerializeField] protected Animator animator;
+    public Animator Animator => animator;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -26,6 +29,14 @@ public class PlayerCtrl : SaiMonoBehaviour
         this.LoadThirdPersonCamera();
         this.LoadCrosshairPointer();
         this.LoadAimingRig();
+        this.LoadAnimator();
+    }
+
+    protected virtual void LoadAnimator()
+    {
+        if (this.animator != null) return;
+        this.animator = GetComponent<Animator>();
+        Debug.Log(transform.name + ": LoadAnimator", gameObject);
     }
 
     protected virtual void LoadAimingRig()
