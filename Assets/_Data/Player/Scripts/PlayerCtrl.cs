@@ -22,6 +22,9 @@ public class PlayerCtrl : SaiMonoBehaviour
     [SerializeField] protected Animator animator;
     public Animator Animator => animator;
 
+    [SerializeField] protected Weapons weapons;
+    public Weapons Weapons => weapons;
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -30,6 +33,14 @@ public class PlayerCtrl : SaiMonoBehaviour
         this.LoadCrosshairPointer();
         this.LoadAimingRig();
         this.LoadAnimator();
+        this.LoadWeapons();
+    }
+
+    protected virtual void LoadWeapons()
+    {
+        if (this.weapons != null) return;
+        this.weapons = GetComponentInChildren<Weapons>();
+        Debug.Log(transform.name + ": LoadWeapons", gameObject);
     }
 
     protected virtual void LoadAnimator()
