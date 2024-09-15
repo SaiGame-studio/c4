@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class InputManager : SaiSingleton<InputManager>
 {
-    protected bool isLeftClick = false;
-    protected bool isRightClick = false;
+    protected bool isAttackLight = false;
+    protected bool isAiming = false;
 
     private void Update()
     {
-        this.CheckRightClick();
+        this.CheckAiming();
+        this.CheckAttackLight();
     }
 
-    protected virtual void CheckRightClick()
+    protected virtual void CheckAiming()
     {
-        this.isLeftClick = Input.GetMouseButton(0);
-        this.isRightClick = Input.GetMouseButton(1);
+        this.isAiming = Input.GetMouseButton(1);
     }
 
-    public virtual bool IsLeftClick()
+    protected virtual void CheckAttackLight()
     {
-        return this.isLeftClick;
+        this.isAttackLight = Input.GetMouseButtonUp(0);
     }
 
-    public virtual bool IsRightClick()
+    public virtual bool IsAttackLight()
     {
-        return this.isRightClick;
+        return this.isAttackLight;
+    }
+
+    public virtual bool IsAiming()
+    {
+        return this.isAiming;
     }
 }

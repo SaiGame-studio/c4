@@ -13,7 +13,7 @@ public class PlayerAiming : PlayerAbstract
 
     protected virtual void Aiming()
     {
-        if (this.isAlwaysAiming || InputManager.Instance.IsRightClick()) this.LookClose();
+        if (this.isAlwaysAiming || InputManager.Instance.IsAiming()) this.LookClose();
         else this.LookFar();
     }
 
