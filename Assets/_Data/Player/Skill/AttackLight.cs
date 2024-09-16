@@ -11,6 +11,5 @@ public class AttackLight : AttackAbstract
         AttackPoint attackPoint = this.GetAttackPoint();
 
         Debug.Log("Light Attack");
-        Debug.Log("attackPoint: " + attackPoint.transform.position);
     }
 }
