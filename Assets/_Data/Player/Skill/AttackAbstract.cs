@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class AttackAbstract : SaiMonoBehaviour
 {
     [SerializeField] protected PlayerCtrl playerCtrl;
+    [SerializeField] protected EffectSpawner spawner;
+    [SerializeField] protected EffectPrefabs prefabs;
 
     protected void Update()
     {
@@ -17,7 +19,17 @@ public abstract class AttackAbstract : SaiMonoBehaviour
     {
         base.LoadComponents();
         this.LoadPlayerCtrl();
+        this.LoadEffectSpawner();
     }
+
+    protected virtual void LoadEffectSpawner()
+    {
+        if (this.spawner != null) return;
+        this.spawner = GameObject.FindAnyObjectByType<EffectSpawner>();
+        this.prefabs = GameObject.FindAnyObjectByType<EffectPrefabs>();
+        Debug.Log(transform.name + ": LoadEffectSpawner", gameObject);
+    }
+
 
     protected virtual void LoadPlayerCtrl()
     {
