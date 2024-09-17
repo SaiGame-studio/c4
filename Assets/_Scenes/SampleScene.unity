@@ -6502,7 +6502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996b99c43e1f4a944be16b74a50c4d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawn: {fileID: 0}
+  despawn: {fileID: 8250320343849116142}
 --- !u!1 &8250320343849116141
 GameObject:
   m_ObjectHideFlags: 0
