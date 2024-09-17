@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawn: {fileID: 2170133634876166735}
-  speed: 10
+  speed: 20
 --- !u!114 &4371842666877183317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 1627463329316352216}
-  damage: 1
+  damage: 5
   bulletCtrl: {fileID: 4371842666877183317}
   sphereCollider: {fileID: 337622494570380037}
 --- !u!1 &7374327124342094146
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 6055063108351497145}
   spawner: {fileID: 0}
+  isDespawnByTime: 1
   timeLife: 7
   currentTime: 7
 --- !u!1 &7844672437479590492
@@ -220,7 +221,6 @@ GameObject:
   - component: {fileID: 3789373380564554483}
   - component: {fileID: 4467861706070963002}
   - component: {fileID: 5152208492329539802}
-  - component: {fileID: 3782642701963306793}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -293,24 +293,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3782642701963306793
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7844672437479590492}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
