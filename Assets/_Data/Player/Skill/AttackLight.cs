@@ -12,7 +12,6 @@ public class AttackLight : AttackAbstract
         AttackPoint attackPoint = this.GetAttackPoint();
         EffectCtrl effect = this.spawner.Spawn(this.GetEffect(), attackPoint.transform.position);
         effect.gameObject.SetActive(true);
-        Debug.Log("Light Attack");
     }
 
     protected virtual EffectCtrl GetEffect()
