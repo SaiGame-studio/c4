@@ -5,6 +5,5 @@ using UnityEngine;
 public class ItemInventory
 {
     public ItemProfileSO itemProfile;
-    public string itemName;
     public int itemCount;
 }

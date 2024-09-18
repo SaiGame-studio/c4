@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemCodeName
+public enum ItemCode
 {
     NoName = 0,
     Gold = 1,
-    Wand = 2,
+    Wand = 100,
 }
