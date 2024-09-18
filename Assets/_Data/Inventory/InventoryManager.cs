@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryManager : SaiSingleton<InventoryManager>
 {
     [SerializeField] protected List<InventoryCtrl> inventories;
+    [SerializeField] protected List<ItemProfileSO> itemProfiles;
 
     protected override void LoadComponents()
     {
@@ -22,16 +23,27 @@ public class InventoryManager : SaiSingleton<InventoryManager>
     {
         InventoryCtrl inventoryCtrl = this.GetByName(InvCodeName.Monies);
 
-        ItemInventory item = new ItemInventory();
-        item.itemName = "Gold";
-        item.itemCount = 11;
-
-        inventoryCtrl.AddItem(item);
+        ItemInventory gold = new ItemInventory();
+        gold.itemProfile = this.GetProfileByCode(ItemCode.Gold);
+        gold.itemCount = 11;
+        inventoryCtrl.AddItem(gold);
 
         ItemInventory item2 = new ItemInventory();
-        item2.itemName = "Gold";
+        item2.itemProfile = this.GetProfileByCode(ItemCode.Gold);
         item2.itemCount = 2;
         inventoryCtrl.AddItem(item2);
+
+        InventoryCtrl inventoryCtrl2 = this.GetByName(InvCodeName.Items);
+
+        ItemInventory wand = new ItemInventory();
+        wand.itemProfile = this.GetProfileByCode(ItemCode.Wand);
+        wand.itemCount = 1;
+        inventoryCtrl2.AddItem(wand);
+
+        ItemInventory wand2 = new ItemInventory();
+        wand2.itemProfile = this.GetProfileByCode(ItemCode.Wand);
+        wand2.itemCount = 1;
+        inventoryCtrl2.AddItem(wand2);
     }
 
     protected virtual void LoadInventories()
@@ -48,9 +60,19 @@ public class InventoryManager : SaiSingleton<InventoryManager>
 
     public virtual InventoryCtrl GetByName(InvCodeName inventoryName)
     {
-        foreach(InventoryCtrl inventory in this.inventories)
+        foreach (InventoryCtrl inventory in this.inventories)
         {
             if (inventory.GetName() == inventoryName) return inventory;
+        }
+
+        return null;
+    }
+
+    public virtual ItemProfileSO GetProfileByCode(ItemCode itemCodeName)
+    {
+        foreach (ItemProfileSO itemProfile in this.itemProfiles)
+        {
+            if (itemProfile.itemCode == itemCodeName) return itemProfile;
         }
 
         return null;

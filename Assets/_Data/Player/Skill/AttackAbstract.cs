@@ -8,7 +8,7 @@ public abstract class AttackAbstract : SaiMonoBehaviour
     [SerializeField] protected EffectSpawner spawner;
     [SerializeField] protected EffectPrefabs prefabs;
 
-    protected void Update()
+    protected void LateUpdate()
     {
         this.Attacking();
     }

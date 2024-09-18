@@ -1173,6 +1173,9 @@ MonoBehaviour:
   inventories:
   - {fileID: 863383043}
   - {fileID: 2059361816}
+  itemProfiles:
+  - {fileID: 11400000, guid: e966803d56edf2640bdc7bfb67fc6254, type: 2}
+  - {fileID: 11400000, guid: 712fa5d0a060d274b92940a207603e61, type: 2}
 --- !u!1001 &399656333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3781,7 +3784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359083866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996b99c43e1f4a944be16b74a50c4d68, type: 3}
+  m_Script: {fileID: 11500000, guid: 63e37ab23f8f7db4aacb5ccd3609391f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   despawn: {fileID: 2111800247}

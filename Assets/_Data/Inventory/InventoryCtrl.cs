@@ -10,6 +10,23 @@ public abstract class InventoryCtrl : SaiMonoBehaviour
 
     public virtual void AddItem(ItemInventory item)
     {
-        this.items.Add(item);
+        ItemInventory itemExist = this.FindItem(item.itemProfile.itemCode);
+        if (!item.itemProfile.isStackable || itemExist == null)
+        {
+            this.items.Add(item);
+            return;
+        }
+
+        itemExist.itemCount += item.itemCount;
+    }
+
+    public virtual ItemInventory FindItem(ItemCode itemCode)
+    {
+        foreach(ItemInventory itemInventory in this.items)
+        {
+            if (itemInventory.itemProfile.itemCode == itemCode) return itemInventory;
+        }
+
+        return null;
     }
 }
