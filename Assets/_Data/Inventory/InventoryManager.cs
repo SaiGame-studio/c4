@@ -16,7 +16,7 @@ public class InventoryManager : SaiSingleton<InventoryManager>
     protected override void Start()
     {
         base.Start();
-        this.AddTestItems();
+        //this.AddTestItems();
     }
 
     protected virtual void AddTestItems()
