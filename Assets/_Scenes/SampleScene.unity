@@ -1487,6 +1487,7 @@ MonoBehaviour:
   - {fileID: 2059361816}
   itemProfiles:
   - {fileID: 11400000, guid: e966803d56edf2640bdc7bfb67fc6254, type: 2}
+  - {fileID: 11400000, guid: 541e86c09f995fc4eba1ab22c1151595, type: 2}
   - {fileID: 11400000, guid: 712fa5d0a060d274b92940a207603e61, type: 2}
 --- !u!114 &394296162
 MonoBehaviour:
