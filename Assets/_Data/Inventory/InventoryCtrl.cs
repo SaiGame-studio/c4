@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class InventoryCtrl : SaiMonoBehaviour
 {
-    protected List<ItemInventory> items = new();
+    [SerializeField] protected List<ItemInventory> items = new();
     public List<ItemInventory> Items => items;
 
     public abstract InvCodeName GetName();
@@ -28,7 +28,7 @@ public abstract class InventoryCtrl : SaiMonoBehaviour
         if (itemExist == null) return false;
         if (itemExist.itemCount < item.itemCount) return false;
         itemExist.itemCount -= item.itemCount;
-
+        if (itemExist.itemCount == 0) this.items.Remove(itemExist);
         return true;
     }
 
