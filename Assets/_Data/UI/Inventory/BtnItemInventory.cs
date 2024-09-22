@@ -49,6 +49,7 @@ public class BtnItemInventory : ButttonAbstract
 
     protected virtual void ItemUpdating()
     {
+        Debug.Log("BtnItemUpdating");
         this.txtItemName.text = this.itemInventory.itemName;
         this.txtItemCount.text = this.itemInventory.itemCount.ToString();
 
