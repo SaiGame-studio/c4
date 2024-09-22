@@ -17,21 +17,31 @@ public class InventoryManager : SaiSingleton<InventoryManager>
     protected override void Start()
     {
         base.Start();
-        this.AddTestItems();
+        this.AddTestGold(100);
+        this.AddTestItems(20);
+        Invoke(nameof(this.AddTestItemDelay), 7f);
     }
 
-    protected virtual void AddTestItems()
+    protected virtual void AddTestItemDelay()
+    {
+        this.AddTestItems(10);
+    }
+
+    protected virtual void AddTestGold(int count)
     {
         InventoryCtrl inventoryCtrl = this.GetByName(InvCodeName.Monies);
 
         ItemInventory gold = new();
         gold.itemProfile = this.GetProfileByCode(ItemCode.Gold);
         gold.itemName = gold.itemProfile.itemName;
-        gold.itemCount = 1000;
+        gold.itemCount = count;
         inventoryCtrl.AddItem(gold);
+    }
 
+    protected virtual void AddTestItems(int count)
+    {
         InventoryCtrl items = this.GetByName(InvCodeName.Items);
-        for (int i= 0; i < 20;i++)
+        for (int i = 0; i < count; i++)
         {
             ItemInventory wand = new();
             wand.itemProfile = this.GetProfileByCode(ItemCode.Wand);
