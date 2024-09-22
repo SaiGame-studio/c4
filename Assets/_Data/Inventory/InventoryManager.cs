@@ -11,6 +11,7 @@ public class InventoryManager : SaiSingleton<InventoryManager>
     {
         base.LoadComponents();
         this.LoadInventories();
+        this.LoadItemProfiles();
     }
 
     protected override void Start()
@@ -27,6 +28,14 @@ public class InventoryManager : SaiSingleton<InventoryManager>
         gold.itemProfile = this.GetProfileByCode(ItemCode.Gold);
         gold.itemCount = 1000;
         inventoryCtrl.AddItem(gold);
+
+        for (int i= 0; i < 20;i++)
+        {
+            ItemInventory wand = new();
+            wand.itemProfile = this.GetProfileByCode(ItemCode.Wand);
+            wand.itemCount = 1;
+            inventoryCtrl.AddItem(wand);
+        }
     }
 
     protected virtual void LoadInventories()
@@ -69,5 +78,13 @@ public class InventoryManager : SaiSingleton<InventoryManager>
     public virtual InventoryCtrl Items()
     {
         return this.GetByName(InvCodeName.Items);
+    }
+
+    protected virtual void LoadItemProfiles()
+    {
+        if (this.itemProfiles.Count > 0) return;
+        ItemProfileSO[] itemProfileSOs = Resources.LoadAll<ItemProfileSO>("/");
+        this.itemProfiles = new List<ItemProfileSO>(itemProfileSOs);
+        Debug.Log(transform.name + ": LoadItemProfiles", gameObject);
     }
 }

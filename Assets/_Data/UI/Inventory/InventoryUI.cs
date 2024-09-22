@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryUI : SaiSingleton<InventoryUI>
 {
     protected bool isShow = true;
-    bool IsShow => isShow;
+    protected bool IsShow => isShow;
 
     [SerializeField] protected BtnItemInventory itemInventory;
 
