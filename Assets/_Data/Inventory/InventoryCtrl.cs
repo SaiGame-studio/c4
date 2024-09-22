@@ -22,11 +22,32 @@ public abstract class InventoryCtrl : SaiMonoBehaviour
         itemExist.itemCount += item.itemCount;
     }
 
+    public virtual bool RemoveItem(ItemInventory item)
+    {
+        ItemInventory itemExist = this.FindItemNotEmpty(item.itemProfile.itemCode);
+        if (itemExist == null) return false;
+        if (itemExist.itemCount < item.itemCount) return false;
+        itemExist.itemCount -= item.itemCount;
+
+        return true;
+    }
+
     public virtual ItemInventory FindItem(ItemCode itemCode)
     {
-        foreach(ItemInventory itemInventory in this.items)
+        foreach (ItemInventory itemInventory in this.items)
         {
             if (itemInventory.itemProfile.itemCode == itemCode) return itemInventory;
+        }
+
+        return null;
+    }
+
+    public virtual ItemInventory FindItemNotEmpty(ItemCode itemCode)
+    {
+        foreach (ItemInventory itemInventory in this.items)
+        {
+            if (itemInventory.itemProfile.itemCode != itemCode) continue;
+            if (itemInventory.itemCount > 0) return itemInventory;
         }
 
         return null;
