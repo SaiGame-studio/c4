@@ -26,15 +26,18 @@ public class InventoryManager : SaiSingleton<InventoryManager>
 
         ItemInventory gold = new();
         gold.itemProfile = this.GetProfileByCode(ItemCode.Gold);
+        gold.itemName = gold.itemProfile.itemName;
         gold.itemCount = 1000;
         inventoryCtrl.AddItem(gold);
 
+        InventoryCtrl items = this.GetByName(InvCodeName.Items);
         for (int i= 0; i < 20;i++)
         {
             ItemInventory wand = new();
             wand.itemProfile = this.GetProfileByCode(ItemCode.Wand);
+            wand.itemName = wand.itemProfile.itemName;
             wand.itemCount = 1;
-            inventoryCtrl.AddItem(wand);
+            items.AddItem(wand);
         }
     }
 
