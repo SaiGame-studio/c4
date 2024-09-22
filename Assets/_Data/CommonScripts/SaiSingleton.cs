@@ -24,7 +24,7 @@ public abstract class SaiSingleton<T> : SaiMonoBehaviour where T : SaiMonoBehavi
         if (_instance == null)
         {
             _instance = this as T;
-            DontDestroyOnLoad(gameObject);
+            if(transform.parent == null) DontDestroyOnLoad(gameObject);
             return;
         }
 
