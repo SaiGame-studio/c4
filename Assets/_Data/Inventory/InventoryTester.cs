@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class InventoryTester : SaiMonoBehaviour
 {
+    protected override void Start()
+    {
+        base.Start();
+        this.AddTestGold(1000);
+    }
+
     [ProButton]
     public virtual void AddTestGold(int count)
     {
