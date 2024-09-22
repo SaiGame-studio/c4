@@ -72,6 +72,7 @@ public class InventoryUI : SaiSingleton<InventoryUI>
                 newBtnItem.SetItem(itemInventory);
                 newBtnItem.transform.localScale = new Vector3(1, 1, 1);
                 newBtnItem.gameObject.SetActive(true);
+                newBtnItem.name = itemInventory.itemName + "-" + itemInventory.itemId;
                 this.btnItems.Add(newBtnItem);
             }
         }
