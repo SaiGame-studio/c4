@@ -7,10 +7,27 @@ public class InventoryUI : SaiSingleton<InventoryUI>
     protected bool isShow = true;
     bool IsShow => isShow;
 
+    [SerializeField] protected BtnItemInventory itemInventory;
+
+
     protected override void Start()
     {
         base.Start();
         this.Show();
+        this.HideDefaultItemInventory();
+    }
+
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        this.LoadBtnItemInventory();
+    }
+
+    protected virtual void LoadBtnItemInventory()
+    {
+        if (this.itemInventory != null) return;
+        this.itemInventory = GetComponentInChildren<BtnItemInventory>();
+        Debug.Log(transform.name + ": LoadBtnItemInventory", gameObject);
     }
 
     public virtual void Show()
@@ -29,6 +46,11 @@ public class InventoryUI : SaiSingleton<InventoryUI>
     {
         if (this.isShow) this.Hide();
         else this.Show();
+    }
+
+    protected virtual void HideDefaultItemInventory()
+    {
+        this.itemInventory.gameObject.SetActive(false);
     }
 }
 
