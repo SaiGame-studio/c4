@@ -1,4 +1,4 @@
-using System.Collections;
+using com.cyborgAssets.inspectorButtonPro;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,44 +13,6 @@ public class InventoryManager : SaiSingleton<InventoryManager>
         this.LoadInventories();
         this.LoadItemProfiles();
     }
-
-    protected override void Start()
-    {
-        base.Start();
-        this.AddTestGold(100);
-        this.AddTestItems(20);
-        Invoke(nameof(this.AddTestItemDelay), 7f);
-    }
-
-    protected virtual void AddTestItemDelay()
-    {
-        this.AddTestItems(10);
-    }
-
-    protected virtual void AddTestGold(int count)
-    {
-        InventoryCtrl inventoryCtrl = this.GetByName(InvCodeName.Monies);
-
-        ItemInventory gold = new();
-        gold.itemProfile = this.GetProfileByCode(ItemCode.Gold);
-        gold.itemName = gold.itemProfile.itemName;
-        gold.itemCount = count;
-        inventoryCtrl.AddItem(gold);
-    }
-
-    protected virtual void AddTestItems(int count)
-    {
-        InventoryCtrl items = this.GetByName(InvCodeName.Items);
-        for (int i = 0; i < count; i++)
-        {
-            ItemInventory wand = new();
-            wand.itemProfile = this.GetProfileByCode(ItemCode.Wand);
-            wand.itemName = wand.itemProfile.itemName;
-            wand.itemCount = 1;
-            items.AddItem(wand);
-        }
-    }
-
     protected virtual void LoadInventories()
     {
         if (this.inventories.Count > 0) return;
