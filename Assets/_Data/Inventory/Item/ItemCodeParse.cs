@@ -12,7 +12,7 @@ public class ItemCodeParse
             }
         }
 
-        itemCode = default(ItemCode);
+        itemCode = default;
         return false;
     }
 

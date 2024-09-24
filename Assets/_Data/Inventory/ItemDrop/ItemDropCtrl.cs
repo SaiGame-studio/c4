@@ -8,9 +8,6 @@ public class ItemDropCtrl : PoolObj
     [SerializeField] protected Rigidbody _rigi;
     public Rigidbody Rigidbody => _rigi;
 
-    [SerializeField] protected InvCodeName invCodeName = InvCodeName.Items;
-    public InvCodeName InvCodeName => invCodeName;
-
     [SerializeField] protected ItemCode itemCode;
     public ItemCode ItemCode => itemCode;
 
@@ -26,13 +23,6 @@ public class ItemDropCtrl : PoolObj
     {
         this.itemCode = itemCode;
         this.itemCount = itemCount;
-    }
-
-    public virtual void SetValue(ItemCode itemCode, int itemCount, InvCodeName invCodeName)
-    {
-        this.itemCode = itemCode;
-        this.itemCount = itemCount;
-        this.invCodeName = invCodeName;
     }
 
     protected override void LoadComponents()
