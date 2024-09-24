@@ -537,7 +537,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   despawn: {fileID: 1882486969}
   _rigi: {fileID: 115456543}
-  invCodeName: 2
   itemCode: 0
   itemCount: 1
 --- !u!54 &115456543
@@ -858,8 +857,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.1, z: 0.2}
-  m_Center: {x: 0, y: 0.05, z: 0}
+  m_Size: {x: 0.40476397, y: 0.08409446, z: 0.064201385}
+  m_Center: {x: 0.01062046, y: 0.057952773, z: 0.007091716}
 --- !u!1 &205541766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1364,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 597041493}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5309,9 +5308,6 @@ MonoBehaviour:
   txtItemName: {fileID: 29867851}
   txtItemCount: {fileID: 944560894}
   itemInventory:
-    itemId: 0
-    itemName: 
-    itemProfile: {fileID: 0}
     itemCount: 0
 --- !u!1 &1153011376
 GameObject:
@@ -8255,7 +8251,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   despawn: {fileID: 537740470}
   _rigi: {fileID: 1890609590}
-  invCodeName: 2
   itemCode: 0
   itemCount: 1
 --- !u!54 &1890609590
@@ -8881,7 +8876,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   despawn: {fileID: 392710200}
   _rigi: {fileID: 1961430982}
-  invCodeName: 2
   itemCode: 0
   itemCount: 1
 --- !u!54 &1961430982

@@ -38,7 +38,7 @@ public class ItemsDropManager : SaiSingleton<ItemsDropManager>
         if(itemPrefab == null) itemPrefab = this.spawner.PoolPrefabs.GetByName("DefaultDrop");
 
         ItemDropCtrl newItem = this.spawner.Spawn(itemPrefab, spawnPosition);
-        newItem.SetValue(itemCode, dropCount, InvCodeName.Monies);
+        newItem.SetValue(itemCode, dropCount);
 
         newItem.gameObject.SetActive(true);
 
