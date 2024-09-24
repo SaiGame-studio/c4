@@ -54,9 +54,9 @@ public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
         return newObject;
     }
 
-    public virtual T Spawn(T buletPrefab, Vector3 postion)
+    public virtual T Spawn(T prefab, Vector3 postion)
     {
-        T newBullet = this.Spawn(buletPrefab);
+        T newBullet = this.Spawn(prefab);
         newBullet.transform.position = postion;
         return newBullet;
     }
