@@ -13,7 +13,7 @@ public class InventoryTester : SaiMonoBehaviour
     [ProButton]
     public virtual void AddTestGold(int count)
     {
-        InventoryCtrl inventoryCtrl = InventoryManager.Instance.GetByName(InvCodeName.Monies);
+        InventoryCtrl inventoryCtrl = InventoryManager.Instance.GetByCodeName(InvCodeName.Monies);
 
         ItemInventory gold = new();
         gold.itemProfile = InventoryManager.Instance.GetProfileByCode(ItemCode.Gold);
@@ -25,7 +25,7 @@ public class InventoryTester : SaiMonoBehaviour
     [ProButton]
     public virtual void RemoveTestGold(int count)
     {
-        InventoryCtrl inventoryCtrl = InventoryManager.Instance.GetByName(InvCodeName.Monies);
+        InventoryCtrl inventoryCtrl = InventoryManager.Instance.GetByCodeName(InvCodeName.Monies);
 
         ItemInventory gold = new();
         gold.itemProfile = InventoryManager.Instance.GetProfileByCode(ItemCode.Gold);
@@ -37,7 +37,7 @@ public class InventoryTester : SaiMonoBehaviour
     [ProButton]
     public virtual void AddTestItems(ItemCode itemCode, int count)
     {
-        InventoryCtrl items = InventoryManager.Instance.GetByName(InvCodeName.Items);
+        InventoryCtrl items = InventoryManager.Instance.GetByCodeName(InvCodeName.Items);
         for (int i = 0; i < count; i++)
         {
             ItemInventory wand = new();
@@ -51,7 +51,7 @@ public class InventoryTester : SaiMonoBehaviour
     [ProButton]
     public virtual void RemoveTestItems(ItemCode itemCode, int count)
     {
-        InventoryCtrl items = InventoryManager.Instance.GetByName(InvCodeName.Items);
+        InventoryCtrl items = InventoryManager.Instance.GetByCodeName(InvCodeName.Items);
         for (int i = 0; i < count; i++)
         {
             ItemInventory wand = new();
