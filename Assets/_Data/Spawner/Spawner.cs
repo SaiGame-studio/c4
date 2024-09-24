@@ -6,12 +6,17 @@ public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
 {
     [SerializeField] protected int spawnCount = 0;
     [SerializeField] protected Transform poolHolder;
+
+    [SerializeField] protected PoolPrefabs<T> poolPrefabs;
+    public PoolPrefabs<T> PoolPrefabs => poolPrefabs;
+
     [SerializeField] protected List<T> inPoolObjs = new();
 
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadPoolHolder();
+        this.LoadPoolPrefabs();
     }
 
     protected virtual void LoadPoolHolder()
@@ -24,6 +29,13 @@ public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
             this.poolHolder.parent = transform;
         }
         Debug.Log(transform.name + ": LoadPoolHolder", gameObject);
+    }
+
+    protected virtual void LoadPoolPrefabs()
+    {
+        if (this.poolPrefabs != null) return;
+        this.poolPrefabs = GetComponentInChildren<PoolPrefabs<T>>();
+        Debug.Log(transform.name + ": LoadPoolPrefabs", gameObject);
     }
 
     public virtual T Spawn(T prefab)
@@ -42,9 +54,9 @@ public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
         return newObject;
     }
 
-    public virtual T Spawn(T buletPrefab, Vector3 postion)
+    public virtual T Spawn(T prefab, Vector3 postion)
     {
-        T newBullet = this.Spawn(buletPrefab);
+        T newBullet = this.Spawn(prefab);
         newBullet.transform.position = postion;
         return newBullet;
     }

@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 597041493}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1720,6 +1720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCount: 0
   poolHolder: {fileID: 1495679201}
+  poolPrefabs: {fileID: 205541767}
   inPoolObjs: []
 --- !u!4 &418514067
 Transform:
@@ -2838,6 +2839,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1513030463}
+  - {fileID: 1561552362}
   m_Father: {fileID: 1144047764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &762239157
@@ -2854,6 +2856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCount: 0
   poolHolder: {fileID: 1513030463}
+  poolPrefabs: {fileID: 1561552363}
   inPoolObjs: []
 --- !u!1 &787807731
 GameObject:
@@ -4812,7 +4815,6 @@ Transform:
   - {fileID: 1112693134}
   - {fileID: 190542013}
   - {fileID: 762239156}
-  - {fileID: 1561552362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146580540
@@ -5513,7 +5515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35d6e9b1416c7a34998fe797f536a94a, type: 2}
+  - {fileID: 2100000, guid: 086e7690c8a0e784099346adcc8b2304, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6481,7 +6483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 574580121}
-  m_Father: {fileID: 1144047764}
+  m_Father: {fileID: 762239156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1561552363
 MonoBehaviour:
@@ -7321,6 +7323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCount: 0
   poolHolder: {fileID: 1174561404}
+  poolPrefabs: {fileID: 0}
   inPoolObjs: []
 --- !u!1 &1768671712
 GameObject:
@@ -7349,7 +7352,7 @@ Transform:
   m_GameObject: {fileID: 1768671712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.739, z: 0}
+  m_LocalPosition: {x: 0, y: 3.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7371,6 +7374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCount: 0
   poolHolder: {fileID: 599760920}
+  poolPrefabs: {fileID: 1075622638}
   inPoolObjs: []
 --- !u!114 &1768671716
 MonoBehaviour:
@@ -7385,6 +7389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1768671715}
+  spawnHeight: 1
+  forceAmount: 5
 --- !u!1001 &1810433440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8355,6 +8361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961430980}
   - component: {fileID: 1961430981}
+  - component: {fileID: 1961430982}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -8392,6 +8399,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawn: {fileID: 392710200}
+  _rigi: {fileID: 1961430982}
+--- !u!54 &1961430982
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961430979}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1966820734
 GameObject:
   m_ObjectHideFlags: 0
