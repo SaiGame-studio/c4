@@ -25,7 +25,7 @@ public class ItemsDropManager : SaiSingleton<ItemsDropManager>
 
     public virtual void Drop(ItemCode itemCode, int dropCoint, Vector3 dropPosition)
     {
-        Vector3 spawnPosition = dropPosition + new Vector3(Random.Range(-2, 2), spawnHeight, Random.Range(-2, 2));
+        Vector3 spawnPosition = dropPosition + new Vector3(0, spawnHeight, 0);
         ItemDropCtrl itemPrefab = this.spawner.PoolPrefabs.GetByName("Gold");
 
         ItemDropCtrl newItem = this.spawner.Spawn(itemPrefab, spawnPosition);
