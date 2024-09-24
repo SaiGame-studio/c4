@@ -25,8 +25,8 @@ public class InventoryUI : SaiSingleton<InventoryUI>
     protected override void Start()
     {
         base.Start();
-        this.Show();
         this.HideDefaultItemInventory();
+        this.Hide();
     }
 
     protected override void LoadComponents()
@@ -76,7 +76,6 @@ public class InventoryUI : SaiSingleton<InventoryUI>
     protected virtual void ItemsUpdating()
     {
         if (!this.isShow) return;
-        Debug.Log("ItemsUpdating");
 
         InventoryCtrl itemInvCtrl = InventoryManager.Instance.Items();
 
