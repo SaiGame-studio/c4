@@ -24,6 +24,9 @@ public class ItemPicker : SaiMonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name,other.gameObject);
+        if (other.transform.parent == null) return;
+        ItemDropCtrl itemDropCtrl = other.transform.parent.GetComponent<ItemDropCtrl>();
+        if (itemDropCtrl == null) return;
+        itemDropCtrl.Despawn.DoDespawn();
     }
 }

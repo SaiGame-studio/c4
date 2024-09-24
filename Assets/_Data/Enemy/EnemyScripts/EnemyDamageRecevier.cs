@@ -62,5 +62,6 @@ public class EnemyDamageRecevier : DamageRecever
     protected virtual void RewardOnDead()
     {
         ItemsDropManager.Instance.DropMany(ItemCode.Gold, 10, transform.position);
+        ItemsDropManager.Instance.DropMany(ItemCode.Wand, 5, transform.position);
     }
 }
