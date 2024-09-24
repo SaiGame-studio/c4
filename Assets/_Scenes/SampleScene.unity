@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 597041493}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7390,8 +7390,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1768671715}
-  spawnHeight: 1
-  forceAmount: 5
 --- !u!1001 &1810433440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8401,6 +8399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   despawn: {fileID: 392710200}
   _rigi: {fileID: 1961430982}
+  invCodeName: 2
+  itemCode: 0
+  itemCount: 1
 --- !u!54 &1961430982
 Rigidbody:
   m_ObjectHideFlags: 0
