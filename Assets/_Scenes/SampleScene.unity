@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 299730087}
-  damage: 1
+  damage: 2
   effectCtrl: {fileID: 1359083868}
   sphereCollider: {fileID: 299730086}
 --- !u!135 &299730086
@@ -6788,6 +6788,7 @@ Transform:
   - {fileID: 1480430582}
   - {fileID: 394296160}
   - {fileID: 418514067}
+  - {fileID: 1768671714}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647629611
@@ -7351,14 +7352,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768671712}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 599760920}
   - {fileID: 1075622637}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1635947454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1768671715
 MonoBehaviour:
@@ -9258,7 +9259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 197085881438185591}
-  damage: 1
+  damage: 10
   effectCtrl: {fileID: 8013904517231703538}
   sphereCollider: {fileID: 1190815109395669930}
 --- !u!1 &5871254921668835669
@@ -9602,4 +9603,3 @@ SceneRoots:
   - {fileID: 901588113}
   - {fileID: 1908268345}
   - {fileID: 292997076}
-  - {fileID: 1768671714}
