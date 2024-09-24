@@ -1721,6 +1721,7 @@ MonoBehaviour:
   spawnCount: 0
   poolHolder: {fileID: 1495679201}
   inPoolObjs: []
+  poolPrefabs: {fileID: 205541767}
 --- !u!4 &418514067
 Transform:
   m_ObjectHideFlags: 0
@@ -2838,6 +2839,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1513030463}
+  - {fileID: 1561552362}
   m_Father: {fileID: 1144047764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &762239157
@@ -2855,6 +2857,7 @@ MonoBehaviour:
   spawnCount: 0
   poolHolder: {fileID: 1513030463}
   inPoolObjs: []
+  poolPrefabs: {fileID: 1561552363}
 --- !u!1 &787807731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4815,6 @@ Transform:
   - {fileID: 1112693134}
   - {fileID: 190542013}
   - {fileID: 762239156}
-  - {fileID: 1561552362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146580540
@@ -6481,7 +6483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 574580121}
-  m_Father: {fileID: 1144047764}
+  m_Father: {fileID: 762239156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1561552363
 MonoBehaviour:
@@ -7322,6 +7324,7 @@ MonoBehaviour:
   spawnCount: 0
   poolHolder: {fileID: 1174561404}
   inPoolObjs: []
+  poolPrefabs: {fileID: 0}
 --- !u!1 &1768671712
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,6 +7375,7 @@ MonoBehaviour:
   spawnCount: 0
   poolHolder: {fileID: 599760920}
   inPoolObjs: []
+  poolPrefabs: {fileID: 1075622638}
 --- !u!114 &1768671716
 MonoBehaviour:
   m_ObjectHideFlags: 0
