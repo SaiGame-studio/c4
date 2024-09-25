@@ -14,6 +14,5 @@ public class TextPlayerExpCount : TextAbstact
         if (item == null) count = "0";
         else count = item.itemCount.ToString();
         this.textPro.text = count;
-
     }
 }
