@@ -10,7 +10,7 @@ public class ItemInventory
     protected ItemProfileSO itemProfile;
     public ItemProfileSO ItemProfile => itemProfile;
     
-    protected string itemName;
+    [SerializeField] protected string itemName;
     
     public int itemCount;
 
