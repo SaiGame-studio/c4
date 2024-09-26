@@ -26,8 +26,8 @@ public abstract class InventoryCtrl : SaiMonoBehaviour
     {
         ItemInventory itemExist = this.FindItemNotEmpty(item.ItemProfile.itemCode);
         if (itemExist == null) return false;
-        if (itemExist.itemCount < item.itemCount) return false;
-        itemExist.itemCount -= item.itemCount;
+        if (!itemExist.CanDeduct(item.itemCount)) return false;
+        itemExist.Deduct(item.itemCount);
         if (itemExist.itemCount == 0) this.items.Remove(itemExist);
         return true;
     }

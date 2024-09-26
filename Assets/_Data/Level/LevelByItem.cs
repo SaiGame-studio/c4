@@ -20,7 +20,6 @@ public abstract class LevelByItem : LevelAbstract
 
     protected virtual ItemInventory GetPlayerExp()
     {
-        Debug.Log("GetPlayerExp");
         if(this.playerExp == null || this.playerExp.ItemID == 0) this.playerExp = InventoryManager.Instance.Monies().FindItem(ItemCode.PlayerExp);
         return this.playerExp;
     }

@@ -9,6 +9,10 @@ public class TowerShooting : TowerAbstract
     [SerializeField] protected float rotationSpeed = 2f;
     [SerializeField] protected EnemyCtrl target;
 
+    [SerializeField] protected int killCount = 0;
+    [SerializeField] protected int totalKill = 0;
+    public int KillCount => killCount;
+
     protected override void Start()
     {
         base.Start();
@@ -19,6 +23,7 @@ public class TowerShooting : TowerAbstract
     protected void FixedUpdate()
     {
         this.Looking();
+        this.IsTargetDead();
     }
 
     protected override void LoadComponents()
@@ -68,6 +73,23 @@ public class TowerShooting : TowerAbstract
         this.currentFirePoint++;
         if (this.currentFirePoint == this.towerCtrl.FirePoints.Count) this.currentFirePoint = 0;
         return firePoint;
+    }
+
+    protected virtual bool IsTargetDead()
+    {
+        if (this.target == null) return true;
+        if (!this.target.EnemyDamageRecevier.IsDead()) return false;
+        this.killCount++;
+        this.totalKill++;
+        this.target = null;
+        return true;
+    }
+
+    public virtual bool DeductKillCount(int count)
+    {
+        if (this.killCount < count) return false;
+        this.killCount -= count;
+        return true;
     }
 }
 
