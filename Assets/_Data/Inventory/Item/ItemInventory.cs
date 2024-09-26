@@ -37,4 +37,11 @@ public class ItemInventory
         if (this.itemName == null || this.itemName == "") return this.itemProfile.itemName;
         return this.itemName;
     }
+
+    public virtual bool Deduct(int number)
+    {
+        if (this.itemCount < number) return false;
+        this.itemCount -= number;
+        return true;
+    }
 }

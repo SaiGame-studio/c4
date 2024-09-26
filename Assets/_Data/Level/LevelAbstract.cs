@@ -9,9 +9,10 @@ public abstract class LevelAbstract : SaiMonoBehaviour
     public int CurrentLevel => currentLevel;
 
     [SerializeField] protected int maxLevel = 100;
+    [SerializeField] protected int nextLevelExp;
 
     protected abstract int GetCurrentExp();
-    protected abstract int DeductExp(int exp);
+    protected abstract bool DeductExp(int exp);
 
     protected virtual void FixedUpdate()
     {
@@ -20,6 +21,7 @@ public abstract class LevelAbstract : SaiMonoBehaviour
 
     protected virtual void Leveling()
     {
+        Debug.Log("Leveling");
         if(this.GetCurrentExp() >= this.GetNextLevelExp())
         {
             this.DeductExp(this.GetNextLevelExp());
@@ -29,6 +31,6 @@ public abstract class LevelAbstract : SaiMonoBehaviour
 
     protected virtual int GetNextLevelExp()
     {
-        return this.currentLevel * 10;
+        return this.nextLevelExp = this.currentLevel * 10;
     }
 }

@@ -9,17 +9,19 @@ public abstract class LevelByItem : LevelAbstract
 
     protected override int GetCurrentExp()
     {
+        if (this.GetPlayerExp() == null) return 0;
         return this.GetPlayerExp().itemCount;
     }
 
-    protected override int DeductExp(int exp)
+    protected override bool DeductExp(int exp)
     {
-        return 1;
+        return this.GetPlayerExp().Deduct(exp);
     }
 
     protected virtual ItemInventory GetPlayerExp()
     {
-        if(this.playerExp == null) this.playerExp = InventoryManager.Instance.Monies().FindItem(ItemCode.PlayerExp);
+        Debug.Log("GetPlayerExp");
+        if(this.playerExp == null || this.playerExp.ItemID == 0) this.playerExp = InventoryManager.Instance.Monies().FindItem(ItemCode.PlayerExp);
         return this.playerExp;
     }
 }
