@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum InvCodeName
+public class PlayerLevel : LevelByItem
 {
-    NoName = 0,
-    Currency = 1,
-    Items = 2,
+    
 }

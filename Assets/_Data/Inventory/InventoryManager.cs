@@ -47,7 +47,7 @@ public class InventoryManager : SaiSingleton<InventoryManager>
 
     public virtual InventoryCtrl Monies()
     {
-        return this.GetByCodeName(InvCodeName.Monies);
+        return this.GetByCodeName(InvCodeName.Currency);
     }
 
     public virtual InventoryCtrl Items()
