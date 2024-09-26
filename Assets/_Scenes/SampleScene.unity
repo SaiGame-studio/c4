@@ -199,6 +199,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc4a377ef0f2d343a5ff0b9271a3e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4989668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4989669}
+  - component: {fileID: 4989670}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4989669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4989668}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1112693134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4989670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4989668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8e53fee39dc7042b6e8d0e2c449532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 1
+  maxLevel: 100
+  nextLevelExp: 0
+  towerCtrl: {fileID: 1112693135}
 --- !u!1 &29642566
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +831,7 @@ MonoBehaviour:
   rotator: {fileID: 614459506}
   towerTargeting: {fileID: 1865229674}
   bulletSpawner: {fileID: 762239157}
+  towerShooting: {fileID: 0}
   bullet: {fileID: 574580122}
   bulletPrefabs: {fileID: 1561552363}
   firePoints:
@@ -3646,6 +3695,7 @@ MonoBehaviour:
   shootSpeed: 0.2
   rotationSpeed: 2
   target: {fileID: 0}
+  killCount: 0
 --- !u!1 &889182623
 GameObject:
   m_ObjectHideFlags: 0
@@ -5468,6 +5518,7 @@ Transform:
   - {fileID: 1046926630}
   - {fileID: 362420555}
   - {fileID: 1460504052}
+  - {fileID: 4989669}
   m_Father: {fileID: 1144047764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112693135
@@ -5486,6 +5537,7 @@ MonoBehaviour:
   rotator: {fileID: 1046926631}
   towerTargeting: {fileID: 362420556}
   bulletSpawner: {fileID: 762239157}
+  towerShooting: {fileID: 1460504053}
   bullet: {fileID: 574580122}
   bulletPrefabs: {fileID: 1561552363}
   firePoints:
@@ -6650,6 +6702,7 @@ MonoBehaviour:
   shootSpeed: 0.2
   rotationSpeed: 2
   target: {fileID: 0}
+  killCount: 0
 --- !u!1001 &1463887562
 PrefabInstance:
   m_ObjectHideFlags: 0
