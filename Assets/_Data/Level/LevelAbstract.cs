@@ -22,15 +22,14 @@ public abstract class LevelAbstract : SaiMonoBehaviour
     protected virtual void Leveling()
     {
         Debug.Log("Leveling");
-        if(this.GetCurrentExp() >= this.GetNextLevelExp())
-        {
-            this.DeductExp(this.GetNextLevelExp());
-            this.currentLevel++;
-        }
+        if (this.currentLevel >= this.maxLevel) return;
+        if (this.GetCurrentExp() < this.GetNextLevelExp()) return;
+        if (!this.DeductExp(this.GetNextLevelExp())) return;
+        this.currentLevel++;
     }
 
     protected virtual int GetNextLevelExp()
     {
-        return this.nextLevelExp = this.currentLevel * 10;
+        return this.nextLevelExp = this.currentLevel * 15;
     }
 }
