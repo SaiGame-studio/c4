@@ -259,14 +259,25 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8036219522534042486, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &10400294 stripped
 Transform:
@@ -538,6 +549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -550,6 +565,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_14
@@ -557,7 +576,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &62487341 stripped
 Transform:
@@ -762,6 +787,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -774,6 +803,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_18
@@ -781,7 +814,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &123046779 stripped
 Transform:
@@ -1122,6 +1161,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -1134,6 +1177,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_5
@@ -1141,7 +1188,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &224974471 stripped
 Transform:
@@ -1300,6 +1353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -1312,6 +1369,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_12
@@ -1319,7 +1380,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &249724633 stripped
 Transform:
@@ -1374,6 +1441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -1386,6 +1457,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_19
@@ -1393,7 +1468,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &252328834 stripped
 Transform:
@@ -1578,6 +1659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -1590,6 +1675,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_2
@@ -1597,7 +1686,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &295509410 stripped
 Transform:
@@ -2265,6 +2360,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -2277,6 +2376,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_4
@@ -2284,7 +2387,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &407038861 stripped
 Transform:
@@ -2631,6 +2740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -2643,6 +2756,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_7
@@ -2650,7 +2767,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &443068558 stripped
 Transform:
@@ -3292,6 +3415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -3304,6 +3431,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_17
@@ -3311,7 +3442,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &600231798 stripped
 Transform:
@@ -3428,6 +3565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -3440,6 +3581,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_23
@@ -3447,7 +3592,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &642617867 stripped
 Transform:
@@ -3917,6 +4068,7 @@ GameObject:
   - component: {fileID: 763057725}
   - component: {fileID: 763057727}
   - component: {fileID: 763057726}
+  - component: {fileID: 763057728}
   m_Layer: 5
   m_Name: TextPlayerLvlCount
   m_TagString: Untagged
@@ -3963,7 +4115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99999
+  m_text: 99
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3997,7 +4149,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4026,7 +4178,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 99.81875, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4040,6 +4192,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763057724}
   m_CullTransparentMesh: 1
+--- !u!114 &763057728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763057724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29f72f15ccf2874fad825edd50ffbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPro: {fileID: 763057726}
 --- !u!1 &787807731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,6 +4423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -4270,6 +4439,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_3
@@ -4277,7 +4450,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &821848795 stripped
 Transform:
@@ -4403,6 +4582,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -4415,6 +4598,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_13
@@ -4422,7 +4609,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &862280914 stripped
 Transform:
@@ -5679,6 +5872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -5691,6 +5888,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_20
@@ -5698,7 +5899,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1006609504 stripped
 Transform:
@@ -6110,7 +6317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lvl:'
+  m_text: 'Level:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6497,6 +6704,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -6509,6 +6720,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_16
@@ -6516,7 +6731,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1108364335 stripped
 Transform:
@@ -6838,6 +7059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -6850,6 +7075,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_21
@@ -6857,7 +7086,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1187650871 stripped
 Transform:
@@ -7083,6 +7318,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -7095,6 +7334,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_1
@@ -7102,7 +7345,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1225892769 stripped
 Transform:
@@ -7157,6 +7406,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -7169,6 +7422,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_9
@@ -7176,7 +7433,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1240794705 stripped
 Transform:
@@ -8372,6 +8635,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -8384,6 +8651,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_11
@@ -8391,7 +8662,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1519004817 stripped
 Transform:
@@ -8496,6 +8773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -8508,6 +8789,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_22
@@ -8515,7 +8800,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1535774811 stripped
 Transform:
@@ -8607,6 +8898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -8619,6 +8914,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_6
@@ -8626,7 +8925,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1544183567 stripped
 Transform:
@@ -9506,6 +9811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -9518,6 +9827,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_8
@@ -9525,7 +9838,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &1765808350 stripped
 Transform:
@@ -10198,7 +10517,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -10430,6 +10749,7 @@ MonoBehaviour:
   aimingRig: {fileID: 849302817}
   animator: {fileID: 1922426390}
   weapons: {fileID: 7713992388176004375}
+  level: {fileID: 1520421794}
 --- !u!1 &1923364304
 GameObject:
   m_ObjectHideFlags: 0
@@ -11065,6 +11385,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161263668497384768, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5244216881545441557, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: bullet
       value: 
@@ -11077,6 +11401,10 @@ PrefabInstance:
       propertyPath: bulletSpawner
       value: 
       objectReference: {fileID: 762239157}
+    - target: {fileID: 5308185859077062603, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2700874171787444297}
     - target: {fileID: 6938204548425012812, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
       propertyPath: m_Name
       value: MachineGun_15
@@ -11084,7 +11412,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2690777374456520539, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7393254158318316001, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5db55436479e5b94a99142f771af9d2c, type: 3}
 --- !u!4 &2068770355 stripped
 Transform:
