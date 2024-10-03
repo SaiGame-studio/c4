@@ -634,6 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f691806e3fe147bcf9f69fa17505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
   isImmotal: 0
   capsuleCollider: {fileID: 96828880}
   enemyCtrl: {fileID: 2105184311}
@@ -1958,7 +1960,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 597041493}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5514,6 +5516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f691806e3fe147bcf9f69fa17505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
   isImmotal: 0
   capsuleCollider: {fileID: 953228306}
   enemyCtrl: {fileID: 948537376}
@@ -6172,6 +6176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f691806e3fe147bcf9f69fa17505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
   isImmotal: 0
   capsuleCollider: {fileID: 1058018910}
   enemyCtrl: {fileID: 303002478}
