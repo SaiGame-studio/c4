@@ -5,13 +5,16 @@ public class TowerShooting : TowerAbstract
 {
     [SerializeField] protected int currentFirePoint = 0;
     [SerializeField] protected float targetLoadSpeed = 1f;
-    [SerializeField] protected float shootSpeed = 0.2f;
-    [SerializeField] protected float rotationSpeed = 2f;
+    [SerializeField] protected float shootSpeed = 0.7f;
+    [SerializeField] protected float rotationSpeed = 4f;
     [SerializeField] protected EnemyCtrl target;
 
     [SerializeField] protected int killCount = 0;
     [SerializeField] protected int totalKill = 0;
     public int KillCount => killCount;
+
+    [SerializeField] protected EffectSpawner effectSpawner;
+
 
     protected override void Start()
     {
@@ -29,6 +32,14 @@ public class TowerShooting : TowerAbstract
     protected override void LoadComponents()
     {
         base.LoadComponents();
+        this.LoadEffectSpawner();
+    }
+
+    protected virtual void LoadEffectSpawner()
+    {
+        if (this.effectSpawner != null) return;
+        this.effectSpawner = GameObject.Find("EffectSpawner").GetComponent<EffectSpawner>();
+        Debug.Log(transform.name + ": LoadEffectSpawner", gameObject);
     }
 
     protected virtual void TargetLoading()
@@ -66,15 +77,20 @@ public class TowerShooting : TowerAbstract
 
     protected virtual void SpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)
     {
-        Bullet newBullet = this.towerCtrl.BulletSpawner.Spawn(this.towerCtrl.Bullet, spawnPoint);
-        newBullet.transform.forward = rotatorDirection;
-        newBullet.gameObject.SetActive(true);
+        EffectCtrl effect = this.effectSpawner.PoolPrefabs.GetByName("ProjectTile1");
+        EffectCtrl newEffect = this.effectSpawner.Spawn(effect, spawnPoint);
+        newEffect.transform.forward = rotatorDirection;
+
+        EffectFlyAbtract effectFly = (EffectFlyAbtract)newEffect;
+        effectFly.FlyToTarget.SetTarget(this.target.TowerTargetable.transform);
+
+        newEffect.gameObject.SetActive(true);
     }
 
     protected virtual void SpawnMuzzle(Vector3 spawnPoint, Vector3 rotatorDirection)
     {
-        EffectCtrl effect = EffectSpawnerCtrl.Instance.Spawner.PoolPrefabs.GetByName("Muzzle1");
-        EffectCtrl newEffect = EffectSpawnerCtrl.Instance.Spawner.Spawn(effect, spawnPoint);
+        EffectCtrl effect = this.effectSpawner.PoolPrefabs.GetByName("Muzzle1");
+        EffectCtrl newEffect = this.effectSpawner.Spawn(effect, spawnPoint);
         newEffect.transform.forward = rotatorDirection;
         newEffect.gameObject.SetActive(true);
     }
