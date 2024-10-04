@@ -1831,7 +1831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid: {fileID: 299730087}
   damage: 2
-  effectCtrl: {fileID: 1359083868}
+  effectCtrl: {fileID: 0}
   sphereCollider: {fileID: 299730086}
 --- !u!135 &299730086
 SphereCollider:
@@ -2560,6 +2560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418514067}
   - component: {fileID: 418514066}
+  - component: {fileID: 418514068}
   m_Layer: 0
   m_Name: EffectSpawner
   m_TagString: Untagged
@@ -2600,6 +2601,19 @@ Transform:
   - {fileID: 205541768}
   m_Father: {fileID: 1635947454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &418514068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418514065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff9f5b45b9ae24449e834decc636fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 418514066}
 --- !u!1 &424725789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,10 +3170,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1561552362}
     m_Modifications:
-    - target: {fileID: 29953701027380382, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2170133634876166735, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: spawner
       value: 
@@ -3167,10 +3177,6 @@ PrefabInstance:
     - target: {fileID: 3970599516928754152, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: m_Name
       value: Bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 6055063108351497145, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
-      propertyPath: speed
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8871742051536891230, guid: ee5fe26831380c74b8a858fa782b9eb3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8179,7 +8185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359083866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e37ab23f8f7db4aacb5ccd3609391f, type: 3}
+  m_Script: {fileID: 11500000, guid: 383c07eea1c27a04ab28838e80f8eabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   despawn: {fileID: 2111800247}
@@ -11953,6 +11959,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2105184308}
     m_Modifications:
+    - target: {fileID: 1884465330830144005, guid: faedc6e0b6662474893beceae434a23d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884465330830144005, guid: faedc6e0b6662474893beceae434a23d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884465330830144005, guid: faedc6e0b6662474893beceae434a23d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1904245691438650467, guid: faedc6e0b6662474893beceae434a23d, type: 3}
       propertyPath: playerCamera
       value: 
@@ -12315,7 +12333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid: {fileID: 197085881438185591}
   damage: 10
-  effectCtrl: {fileID: 8013904517231703538}
+  effectCtrl: {fileID: 0}
   sphereCollider: {fileID: 1190815109395669930}
 --- !u!1 &5871254921668835669
 GameObject:
@@ -12522,7 +12540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2536580952778234183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996b99c43e1f4a944be16b74a50c4d68, type: 3}
+  m_Script: {fileID: 11500000, guid: 8376b66c1d889d844a7a92dfe8ac188d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   despawn: {fileID: 8250320343849116142}

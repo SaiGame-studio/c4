@@ -49,10 +49,7 @@ public class TowerShooting : TowerAbstract
             0.0f
         );
 
-        // Apply the new direction to the rotator
         this.towerCtrl.Rotator.rotation = Quaternion.LookRotation(newDirection);
-
-        //this.towerCtrl.Rotator.LookAt(this.target.TowerTargetable.transform.position);
     }
 
     protected virtual void Shooting()
@@ -65,6 +62,11 @@ public class TowerShooting : TowerAbstract
         Vector3 rotatorDirection = this.towerCtrl.Rotator.transform.forward;
         newBullet.transform.forward = rotatorDirection;
         newBullet.gameObject.SetActive(true);
+
+        EffectCtrl effect = EffectSpawnerCtrl.Instance.Spawner.PoolPrefabs.GetByName("Muzzle1");
+        EffectCtrl newEffect = EffectSpawnerCtrl.Instance.Spawner.Spawn(effect, firePoint.transform.position);
+        newBullet.transform.forward = rotatorDirection;
+        newEffect.gameObject.SetActive(true);
     }
 
     protected virtual FirePoint GetFirePoint()
