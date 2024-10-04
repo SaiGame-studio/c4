@@ -13,6 +13,9 @@ public class TowerShooting : TowerAbstract
     [SerializeField] protected int totalKill = 0;
     public int KillCount => killCount;
 
+    [SerializeField] protected EffectSpawner effectSpawner;
+
+
     protected override void Start()
     {
         base.Start();
@@ -29,6 +32,14 @@ public class TowerShooting : TowerAbstract
     protected override void LoadComponents()
     {
         base.LoadComponents();
+        this.LoadEffectSpawner();
+    }
+
+    protected virtual void LoadEffectSpawner()
+    {
+        if (this.effectSpawner != null) return;
+        this.effectSpawner = GameObject.FindAnyObjectByType<EffectSpawner>();
+        Debug.Log(transform.name + ": LoadEffectSpawner", gameObject);
     }
 
     protected virtual void TargetLoading()

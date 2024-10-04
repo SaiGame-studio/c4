@@ -100,6 +100,7 @@ MonoBehaviour:
   target: {fileID: 0}
   killCount: 0
   totalKill: 0
+  effectSpawner: {fileID: 0}
 --- !u!1 &2690777374456520539
 GameObject:
   m_ObjectHideFlags: 0
