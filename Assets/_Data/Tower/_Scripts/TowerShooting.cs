@@ -61,6 +61,7 @@ public class TowerShooting : TowerAbstract
         Vector3 rotatorDirection = this.towerCtrl.Rotator.transform.forward;
 
         this.SpawnBullet(firePoint.transform.position, rotatorDirection);
+        this.SpawnMuzzle(firePoint.transform.position, rotatorDirection);
     }
 
     protected virtual void SpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)

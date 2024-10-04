@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PathsManager : SaiSingleton<PathsManager>
 {
-    [SerializeField] protected List<Path> paths = new();
+    [SerializeField] protected List<PathMoving> paths = new();
 
     protected override void Awake()
     {
@@ -21,21 +21,21 @@ public class PathsManager : SaiSingleton<PathsManager>
         if (this.paths.Count > 0) return;
         foreach (Transform child in transform)
         {
-            Path path = child.GetComponent<Path>();
+            PathMoving path = child.GetComponent<PathMoving>();
             path.LoadPoints();
             this.paths.Add(path);
         }
         Debug.Log(transform.name + ": LoadPaths", gameObject);
     }
 
-    public virtual Path GetPath(int index)
+    public virtual PathMoving GetPath(int index)
     {
         return this.paths[index];
     }
 
-    public virtual Path GetPath(string pathName)
+    public virtual PathMoving GetPath(string pathName)
     {
-        foreach(Path path in this.paths)
+        foreach(PathMoving path in this.paths)
         {
             if (path.name == pathName) return path;
         }
