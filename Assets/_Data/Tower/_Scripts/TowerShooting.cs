@@ -75,13 +75,6 @@ public class TowerShooting : TowerAbstract
         this.SpawnMuzzle(firePoint.transform.position, rotatorDirection);
     }
 
-    protected virtual void _OldSpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)
-    {
-        Bullet newBullet = this.towerCtrl.BulletSpawner.Spawn(this.towerCtrl.Bullet, spawnPoint);
-        newBullet.transform.forward = rotatorDirection;
-        newBullet.gameObject.SetActive(true);
-    }
-
     protected virtual void SpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)
     {
         EffectCtrl effect = this.effectSpawner.PoolPrefabs.GetByName("ProjectTile1");
