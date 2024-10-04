@@ -82,6 +82,18 @@ public class TowerShooting : TowerAbstract
         newBullet.gameObject.SetActive(true);
     }
 
+    protected virtual void _SpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)
+    {
+        EffectCtrl effect = this.effectSpawner.PoolPrefabs.GetByName("ProjectTile1");
+        EffectCtrl newEffect = this.effectSpawner.Spawn(effect, spawnPoint);
+        newEffect.transform.forward = rotatorDirection;
+
+        EffectFlyAbtract effectFly = (EffectFlyAbtract)newEffect;
+        effectFly.FlyToTarget.SetTarget(this.target.TowerTargetable.transform);
+
+        newEffect.gameObject.SetActive(true);
+    }
+
     protected virtual void SpawnMuzzle(Vector3 spawnPoint, Vector3 rotatorDirection)
     {
         EffectCtrl effect = EffectSpawnerCtrl.Instance.Spawner.PoolPrefabs.GetByName("Muzzle1");
