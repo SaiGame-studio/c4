@@ -1922,8 +1922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 299730087}
-  damage: 2
-  effectCtrl: {fileID: 0}
+  damage: 4
+  effectCtrl: {fileID: 1359083868}
   sphereCollider: {fileID: 299730086}
 --- !u!135 &299730086
 SphereCollider:
@@ -46468,8 +46468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 197085881438185591}
-  damage: 10
-  effectCtrl: {fileID: 0}
+  damage: 5
+  effectCtrl: {fileID: 8013904517231703538}
   sphereCollider: {fileID: 1190815109395669930}
 --- !u!1 &5871254921668835669
 GameObject:
