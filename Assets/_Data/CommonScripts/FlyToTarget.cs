@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlyToTarget : SaiMonoBehaviour
 {
     protected Transform target;
-    protected float speed = 27f;
+    [SerializeField] protected float speed = 34f;
 
     protected void Update()
     {
