@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class MuzzleEffect : SaiMonoBehaviour
 {
     [SerializeField] protected MuzzleCode muzzle;
+    [SerializeField] protected EffectSpawner spawner;
 
     protected virtual void OnEnable()
     {
