@@ -31,9 +31,9 @@ public class EffectDamageSender : DamageSender
         Debug.Log(transform.name + ": LoadSphereCollider", gameObject);
     }
 
-    protected override void Send(DamageRecever damageRecever)
+    protected override void Send(DamageReceiver damageReceiver)
     {
-        base.Send(damageRecever);
+        base.Send(damageReceiver);
         this.effectCtrl.Despawn.DoDespawn();
     }
 }
