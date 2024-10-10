@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackLight : AttackAbstract
 {
-    protected string effectName = "Fire1";
+    protected string effectName = "Projectile2";
 
     protected override void Attacking()
     {

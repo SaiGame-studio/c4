@@ -33,4 +33,9 @@ public abstract class DamageSender : SaiMonoBehaviour
     {
         damageRecever.Deduct(this.damage);
     }
+
+    public virtual void SetDamage(int newDamage)
+    {
+        this.damage = newDamage;
+    }
 }

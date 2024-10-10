@@ -65,7 +65,7 @@ public class TowerShooting : TowerAbstract
 
     protected virtual void Shooting()
     {
-        Invoke(nameof(this.Shooting), this.shootSpeed);
+        Invoke(nameof(this.Shooting), this.shootSpeed + Random.Range(-0.1f, 0.1f));
         if (this.target == null) return;
 
         FirePoint firePoint = this.GetFirePoint();
@@ -77,7 +77,7 @@ public class TowerShooting : TowerAbstract
 
     protected virtual void SpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)
     {
-        EffectCtrl effect = this.effectSpawner.PoolPrefabs.GetByName("ProjectTile1");
+        EffectCtrl effect = this.effectSpawner.PoolPrefabs.GetByName("Projectile1");
         EffectCtrl newEffect = this.effectSpawner.Spawn(effect, spawnPoint);
         newEffect.transform.forward = rotatorDirection;
 

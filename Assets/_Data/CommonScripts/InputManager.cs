@@ -24,7 +24,12 @@ public class InputManager : SaiSingleton<InputManager>
 
     protected virtual void CheckAttacking()
     {
-        if (!this.IsAiming()) return;
+        if (!this.IsAiming())
+        {
+            this.isAttackHeavy = false;
+            this.isAttackLight = false;
+            return;
+        }
 
         if (Input.GetMouseButton(0)) this.attackHold += Time.deltaTime;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackHeavy : AttackAbstract
 {
-    protected string effectName = "Fire2";
+    protected string effectName = "Projectile3";
     protected float timer = 0;
     protected float delay = 0.1f;
 
