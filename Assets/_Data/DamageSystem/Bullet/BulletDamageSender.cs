@@ -32,9 +32,9 @@ public class BulletDamageSender : DamageSender
         Debug.Log(transform.name + ": LoadSphereCollider", gameObject);
     }
 
-    protected override void Send(DamageRecever damageRecever)
+    protected override void Send(DamageReceiver damageReceiver)
     {
-        base.Send(damageRecever);
+        base.Send(damageReceiver);
         this.bulletCtrl.Bullet.Despawn.DoDespawn();
     }
 }

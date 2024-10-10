@@ -14,8 +14,8 @@ public abstract class EnemyCtrl : PoolObj
     [SerializeField] protected TowerTargetable towerTargetable;
     public TowerTargetable TowerTargetable => towerTargetable;
 
-    [SerializeField] protected EnemyDamageRecevier enemyDamageRecevier;
-    public EnemyDamageRecevier EnemyDamageRecevier => enemyDamageRecevier;
+    [SerializeField] protected EnemyDamageReceiver enemyDamageRecevier;
+    public EnemyDamageReceiver EnemyDamageRecevier => enemyDamageRecevier;
 
     protected override void LoadComponents()
     {
@@ -30,7 +30,7 @@ public abstract class EnemyCtrl : PoolObj
     protected virtual void LoadEnemyDamageRecevier()
     {
         if (this.enemyDamageRecevier != null) return;
-        this.enemyDamageRecevier = GetComponentInChildren<EnemyDamageRecevier>();
+        this.enemyDamageRecevier = GetComponentInChildren<EnemyDamageReceiver>();
         Debug.Log(transform.name + ": LoadEnemyDamageRecevier", gameObject);
     }
 
