@@ -12,7 +12,7 @@ public abstract class DamageSender : SaiMonoBehaviour
     {
         DamageReceiver damageReceiver = collider.GetComponent<DamageReceiver>();
         if (damageReceiver == null) return;
-        this.Send(damageReceiver);
+        this.Send(damageReceiver, collider);
     }
 
     protected override void LoadComponents()
@@ -29,7 +29,7 @@ public abstract class DamageSender : SaiMonoBehaviour
         Debug.Log(transform.name + ": LoadRigidbody", gameObject);
     }
 
-    protected virtual void Send(DamageReceiver damageReceiver)
+    protected virtual void Send(DamageReceiver damageReceiver, Collider collider)
     {
         damageReceiver.Deduct(this.damage);
     }
