@@ -3,6 +3,7 @@ using UnityEngine;
 public class SoundSpawnerCtrl : SaiSingleton<SoundSpawnerCtrl>
 {
     [SerializeField] protected SoundSpawner spawner;
+    public SoundSpawner Spawner => spawner;
 
     protected override void LoadComponents()
     {

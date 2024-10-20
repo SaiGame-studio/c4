@@ -4,6 +4,6 @@ public class LastStandCtrl : MusicCtrl
 {
     public override string GetName()
     {
-        return "LastStand";
+        return SoundName.LastStand.ToString();
     }
 }
