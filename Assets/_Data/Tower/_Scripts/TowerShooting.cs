@@ -74,7 +74,7 @@ public class TowerShooting : TowerAbstract
 
         this.SpawnBullet(firePoint.transform.position, rotatorDirection);
         this.SpawnMuzzle(firePoint.transform.position, rotatorDirection);
-        //this.SpawnSound(firePoint.transform.position);
+        this.SpawnSound(firePoint.transform.position);
     }
 
     protected virtual void SpawnBullet(Vector3 spawnPoint, Vector3 rotatorDirection)

@@ -16,7 +16,7 @@ public class SoundManager : SaiSingleton<SoundManager>
     protected override void Start()
     {
         base.Start();
-        this.StartMusicBackground();
+        //this.StartMusicBackground();
     }
 
     protected override void LoadComponents()
@@ -51,6 +51,7 @@ public class SoundManager : SaiSingleton<SoundManager>
             this.StartMusicBackground();
             return;
         }
+
         bool status = this.bgMusic.gameObject.activeSelf;
         this.bgMusic.gameObject.SetActive(!status);
     }
