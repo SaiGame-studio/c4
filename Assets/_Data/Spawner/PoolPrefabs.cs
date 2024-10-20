@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PoolPrefabs<T> : SaiMonoBehaviour where T : MonoBehaviour
+public abstract class PoolPrefabs<T> : SaiMonoBehaviour where T : PoolObj
 {
     [SerializeField] protected List<T> prefabs = new();
 

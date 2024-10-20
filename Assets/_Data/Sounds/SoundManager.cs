@@ -5,6 +5,7 @@ public class SoundManager : SaiSingleton<SoundManager>
     [SerializeField] protected SoundName bgName = SoundName.LastStand;
     [SerializeField] protected MusicCtrl bgMusic;
     [SerializeField] protected SoundSpawnerCtrl ctrl;
+    public SoundSpawnerCtrl Ctrl => ctrl;
 
     protected override void Awake()
     {
@@ -45,6 +46,11 @@ public class SoundManager : SaiSingleton<SoundManager>
 
     public virtual void ToggleMusic()
     {
+        if (this.bgMusic == null)
+        {
+            this.StartMusicBackground();
+            return;
+        }
         bool status = this.bgMusic.gameObject.activeSelf;
         this.bgMusic.gameObject.SetActive(!status);
     }

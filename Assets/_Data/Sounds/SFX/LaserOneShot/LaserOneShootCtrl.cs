@@ -4,6 +4,6 @@ public class LaserOneShootCtrl : SFXCtrl
 {
     public override string GetName()
     {
-        return SoundName.LaserOneShot.ToString();
+        return SoundName.LaserOneShoot.ToString();
     }
 }
