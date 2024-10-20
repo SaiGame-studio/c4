@@ -8,6 +8,6 @@ public enum SoundName
     LastStand = 1,
 
     //SFX
-    LaserOneShot = 100,
+    LaserOneShoot = 100,
     LaserKickDrum = 101,
 }

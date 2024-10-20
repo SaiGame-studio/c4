@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackHeavy : AttackAbstract
@@ -7,6 +5,8 @@ public class AttackHeavy : AttackAbstract
     protected string effectName = "Projectile3";
     protected float timer = 0;
     protected float delay = 0.1f;
+    protected SoundName shootSfxName = SoundName.LaserOneShoot;
+
 
     protected override void Attacking()
     {
@@ -23,10 +23,19 @@ public class AttackHeavy : AttackAbstract
         effectFly.FlyToTarget.SetTarget(this.playerCtrl.CrosshairPointer.transform);
 
         effect.gameObject.SetActive(true);
+
+        this.SpawnSound(effectFly.transform.position);
     }
 
     protected virtual EffectCtrl GetEffect()
     {
         return this.prefabs.GetByName(this.effectName);
+    }
+
+    protected virtual void SpawnSound(Vector3 position)
+    {
+        SFXCtrl sfxPrefab = (SFXCtrl)SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootSfxName.ToString());
+        SFXCtrl newSfx = (SFXCtrl)SoundSpawnerCtrl.Instance.Spawner.Spawn(sfxPrefab, position);
+        newSfx.gameObject.SetActive(true);
     }
 }

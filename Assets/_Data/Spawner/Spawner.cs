@@ -40,7 +40,6 @@ public abstract class Spawner<T> : SaiMonoBehaviour where T : PoolObj
 
     public virtual T Spawn(T prefab)
     {
-
         T newObject = this.GetObjFromPool(prefab);
         if (newObject == null)
         {
