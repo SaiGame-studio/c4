@@ -9,5 +9,5 @@ public enum SoundName
 
     //SFX
     LaserOneShot = 100,
-    LaserKickDrum = 100,
+    LaserKickDrum = 101,
 }

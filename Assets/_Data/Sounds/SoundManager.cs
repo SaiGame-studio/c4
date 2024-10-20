@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SoundManager : SaiMonoBehaviour
 {
-    [SerializeField] protected SoundName backgroundMusic = SoundName.LastStand;
-    [SerializeField] protected MusicCtrl background;
+    [SerializeField] protected SoundName bgName = SoundName.LastStand;
+    [SerializeField] protected MusicCtrl bgMusic;
     [SerializeField] protected SoundSpawnerCtrl ctrl;
 
     protected override void Awake()
@@ -31,8 +31,15 @@ public class SoundManager : SaiMonoBehaviour
         Debug.Log(transform.name + ": LoadSoundSpawnerCtrl", gameObject);
     }
 
-    protected virtual void StartMusicBackground()
+    public virtual void StartMusicBackground()
     {
-        
+        if (this.bgMusic == null) this.bgMusic = this.CreateBackgroundMusic();
+        this.bgMusic.gameObject.SetActive(true);
+    }
+
+    protected virtual MusicCtrl CreateBackgroundMusic()
+    {
+        MusicCtrl musicPrefab = (MusicCtrl) this.ctrl.Prefabs.GetByName(this.bgName.ToString());
+        return (MusicCtrl) this.ctrl.Spawner.Spawn(musicPrefab, Vector3.zero);
     }
 }
