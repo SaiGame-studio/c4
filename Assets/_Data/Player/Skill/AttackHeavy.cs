@@ -5,7 +5,7 @@ public class AttackHeavy : AttackAbstract
     protected string effectName = "Projectile3";
     protected float timer = 0;
     protected float delay = 0.1f;
-    protected SoundName shootName = SoundName.LaserOneShoot;
+    protected SoundName shootSfxName = SoundName.LaserOneShoot;
 
 
     protected override void Attacking()
@@ -34,7 +34,7 @@ public class AttackHeavy : AttackAbstract
 
     protected virtual void SpawnSound(Vector3 position)
     {
-        SFXCtrl sfxPrefab = (SFXCtrl)SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootName.ToString());
+        SFXCtrl sfxPrefab = (SFXCtrl)SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootSfxName.ToString());
         SFXCtrl newSfx = (SFXCtrl)SoundSpawnerCtrl.Instance.Spawner.Spawn(sfxPrefab, position);
         newSfx.gameObject.SetActive(true);
     }

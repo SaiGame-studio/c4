@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackLight : AttackAbstract
 {
     protected string effectName = "Projectile2";
-    protected SoundName shootName = SoundName.LaserOneShoot;
+    protected SoundName shootSfxName = SoundName.LaserOneShoot;
 
     protected override void Attacking()
     {
@@ -28,7 +28,7 @@ public class AttackLight : AttackAbstract
 
     protected virtual void SpawnSound(Vector3 position)
     {
-        SFXCtrl sfxPrefab = (SFXCtrl)SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootName.ToString());
+        SFXCtrl sfxPrefab = (SFXCtrl)SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootSfxName.ToString());
         SFXCtrl newSfx = (SFXCtrl)SoundSpawnerCtrl.Instance.Spawner.Spawn(sfxPrefab, position);
         newSfx.gameObject.SetActive(true);
     }

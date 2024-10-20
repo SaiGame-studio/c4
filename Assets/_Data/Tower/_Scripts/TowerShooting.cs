@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerShooting : TowerAbstract
@@ -13,7 +12,7 @@ public class TowerShooting : TowerAbstract
     [SerializeField] protected int totalKill = 0;
     public int KillCount => killCount;
 
-    [SerializeField] protected SoundName shootName = SoundName.LaserKickDrum;
+    [SerializeField] protected SoundName shootSfxName = SoundName.LaserKickDrum;
 
     [SerializeField] protected EffectSpawner effectSpawner;
 
@@ -124,7 +123,7 @@ public class TowerShooting : TowerAbstract
 
     protected virtual void SpawnSound(Vector3 position)
     {
-        SFXCtrl sfxPrefab = (SFXCtrl) SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootName.ToString());
+        SFXCtrl sfxPrefab = (SFXCtrl) SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootSfxName.ToString());
         SFXCtrl newSfx = (SFXCtrl) SoundSpawnerCtrl.Instance.Spawner.Spawn(sfxPrefab, position);
         newSfx.gameObject.SetActive(true);
     }
