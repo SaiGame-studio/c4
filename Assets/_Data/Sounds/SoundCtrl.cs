@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class SoundCtrl : PoolObj
 {
     [SerializeField] protected AudioSource audioSource;
+    public AudioSource AudioSource => audioSource;
 
     protected override void LoadComponents()
     {
