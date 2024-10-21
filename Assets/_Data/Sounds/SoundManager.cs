@@ -105,11 +105,17 @@ public class SoundManager : SaiSingleton<SoundManager>
 
     protected virtual void VolumeMusicUpdating()
     {
-
+        foreach(MusicCtrl musicCtrl in this.listMusic)
+        {
+            musicCtrl.AudioSource.volume = this.volumeMusic;
+        }
     }
 
     protected virtual void VolumeSfxUpdating()
     {
-
+        foreach (SFXCtrl sfxCtrl in this.listSfx)
+        {
+            sfxCtrl.AudioSource.volume = this.volumeSfx;
+        }
     }
 }
