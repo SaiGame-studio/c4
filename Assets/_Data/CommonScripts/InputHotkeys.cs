@@ -8,11 +8,13 @@ public class InputHotkeys : SaiSingleton<InputHotkeys>
     public bool IsToogleInventoryUI => isToogleInventoryUI;
 
     public bool isToogleMusic = false;
+    public bool isToogleSetting = false;
 
     protected virtual void Update()
     {
         this.OpenInventory();
         this.ToogleMusic();
+        this.ToogleSetting();
     }
 
     protected virtual void OpenInventory()
@@ -23,5 +25,10 @@ public class InputHotkeys : SaiSingleton<InputHotkeys>
     protected virtual void ToogleMusic()
     {
         this.isToogleMusic = Input.GetKeyUp(KeyCode.M);
+    }
+
+    protected virtual void ToogleSetting()
+    {
+        this.isToogleSetting = Input.GetKeyUp(KeyCode.N);
     }
 }

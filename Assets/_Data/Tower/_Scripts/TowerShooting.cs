@@ -123,8 +123,8 @@ public class TowerShooting : TowerAbstract
 
     protected virtual void SpawnSound(Vector3 position)
     {
-        SFXCtrl sfxPrefab = (SFXCtrl) SoundSpawnerCtrl.Instance.Prefabs.GetByName(this.shootSfxName.ToString());
-        SFXCtrl newSfx = (SFXCtrl) SoundSpawnerCtrl.Instance.Spawner.Spawn(sfxPrefab, position);
+        SFXCtrl newSfx = SoundManager.Instance.CreateSfx(this.shootSfxName);
+        newSfx.transform.position = position;
         newSfx.gameObject.SetActive(true);
     }
 }
