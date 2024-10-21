@@ -30,8 +30,8 @@ public class SoundManager : SaiSingleton<SoundManager>
 
     protected virtual void FixedUpdate()
     {
-        this.VolumeMusicUpdating();
-        this.VolumeSfxUpdating();
+        //this.VolumeMusicUpdating();
+        //this.VolumeSfxUpdating();
     }
 
     protected override void LoadComponents()
@@ -103,16 +103,18 @@ public class SoundManager : SaiSingleton<SoundManager>
         this.listSfx.Add(newSound);
     }
 
-    protected virtual void VolumeMusicUpdating()
+    public virtual void VolumeMusicUpdating(float volume)
     {
+        this.volumeMusic = volume;
         foreach(MusicCtrl musicCtrl in this.listMusic)
         {
             musicCtrl.AudioSource.volume = this.volumeMusic;
         }
     }
 
-    protected virtual void VolumeSfxUpdating()
+    public virtual void VolumeSfxUpdating(float volume)
     {
+        this.volumeSfx = volume;
         foreach (SFXCtrl sfxCtrl in this.listSfx)
         {
             sfxCtrl.AudioSource.volume = this.volumeSfx;
