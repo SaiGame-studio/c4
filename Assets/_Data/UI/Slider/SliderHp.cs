@@ -15,5 +15,4 @@ public abstract class SliderHp : SliderAbstact
     }
 
     protected abstract float GetValue();
-
 }
